@@ -28,17 +28,17 @@ class CfgPatches {
             "LT_Crewman",
             "LT_Pilot",
             "LT_HeliPilot",
-            "LT_C_Rifleman",
-            "LT_C_Scout",
-            "LT_C_Rifleman_GL",
-            "LT_C_Autorifleman",
-            "LT_C_GPMG",
-            "LT_C_AT",
-            "LT_C_AA",
-            "LT_C_Medic",
-            "LT_C_Engineer",
-            "LT_C_Marksman",
-            "LT_C_Sniper"
+            "LT_Rifleman_H",
+            "LT_Scout_H",
+            "LT_Rifleman_GL_H",
+            "LT_Autorifleman_H",
+            "LT_GPMG_H",
+            "LT_AT_H",
+            "LT_AA_H",
+            "LT_Medic_H",
+            "LT_Engineer_H",
+            "LT_Marksman_H",
+            "LT_Sniper_H"
 		};
 	};
 };
@@ -54,11 +54,13 @@ class CfgVehicles {
 		sensitivity = 2.5;  
         threat[] = {1, 0.5, 0.5};
         editorSubcategory = "EdSubcat_Personnel";
-        model = "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_PMC\CUP_pmc_unit_4.p3d"; // \CUP\Creatures\People\Military\CUP_Creatures_People_Military_PMC\CUP_pmc_unit_4.p3d
-        uniformClass = "U_LT_PMC";
-        hiddenSelectionsTextures[] = {
-			"\CUP\Creatures\People\Military\CUP_Creatures_People_Military_PMC\data\combat_shirt_black_co.paa",
-			"\CUP\Creatures\People\Military\CUP_Creatures_People_Military_PMC\data\cargopants_black_co.paa"
+		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
+        uniformClass = "U_OG_Guerilla2_3";
+		hiddenSelections[] = {
+			"camo"
+		};
+		hiddenSelectionsTextures[] = {
+			"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla2_3_co.paa"
 		};
         backpack = "B_LT_AssaultPack";
         weapons[] = {
@@ -209,23 +211,23 @@ class CfgVehicles {
         displayName = "Autorifleman";
         backpack = "B_LT_Carryall_Auto";
         weapons[] = {
-            "rhs_weap_vhsd2_ct15x",
+            "W_LT_RPK74",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "rhs_weap_vhsd2_ct15x",
+            "W_LT_RPK74",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
         magazines[] = {
-            "rhssaf_100rnd_556x45_EPR_G36", 
+            "rhs_45Rnd_545X39_7N22_AK", 
             MAG_3(9Rnd_45ACP_Mag)
         };
         respawnMagazines[] = {
-            "rhssaf_100rnd_556x45_EPR_G36", 
+            "rhs_45Rnd_545X39_7N22_AK", 
             MAG_3(9Rnd_45ACP_Mag)
         };
         linkedItems[] = {
@@ -582,7 +584,7 @@ class CfgVehicles {
         };
     };
 
-    class LT_C_Rifleman : LT_Rifleman {
+    class LT_Rifleman_H : LT_Rifleman {
         displayName = "Rifleman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -609,7 +611,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Scout : LT_Scout {
+    class LT_Scout_H : LT_Scout {
         displayName = "Scout (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -636,7 +638,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Rifleman_GL : LT_Rifleman_GL {
+    class LT_Rifleman_GL_H : LT_Rifleman_GL {
         displayName = "Grenadier (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -663,7 +665,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Autorifleman : LT_Autorifleman {
+    class LT_Autorifleman_H : LT_Autorifleman {
         displayName = "Autorifleman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -690,7 +692,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_GPMG : LT_GPMG {
+    class LT_GPMG_H : LT_GPMG {
         displayName = "Machinegunner (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -717,7 +719,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_AT : LT_C_Rifleman {
+    class LT_AT_H : LT_Rifleman_H {
         displayName = "Anti-Tank Specialist (HAZMAT)";
         backpack = "B_LT_Carryall_AT";
         weapons[] = {
@@ -745,7 +747,7 @@ class CfgVehicles {
             "rhs_mag_smaw_HEDP"
         };
     };
-    class LT_C_AA : LT_C_Rifleman {
+    class LT_AA_H : LT_Rifleman_H {
         displayName = "Anti-Air Specialist (HAZMAT)";
         weapons[] = {
             "W_LT_VHSD2_Holo",
@@ -762,7 +764,7 @@ class CfgVehicles {
             "Put"
         };
     };
-    class LT_C_Medic : LT_Medic {
+    class LT_Medic_H : LT_Medic {
         displayName = "Medic (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -789,7 +791,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Engineer : LT_Engineer {
+    class LT_Engineer_H : LT_Engineer {
         displayName = "Engineer (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -816,7 +818,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Marksman : LT_Marksman {
+    class LT_Marksman_H : LT_Marksman {
         displayName = "Marksman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
@@ -843,7 +845,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_C_Sniper : LT_Sniper {
+    class LT_Sniper_H : LT_Sniper {
         displayName = "Sniper (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         linkedItems[] = {

@@ -13,24 +13,24 @@ class CfgPatches {
             "LiontoothGroup"
         };
 		units[] = {
-            "LT_SE_Rifleman",
-            "LT_SE_Rifleman_GL",
-            "LT_SE_Scout",
-            "LT_SE_Medic",
-            "LT_SE_Marksman",
-            "LT_SE_Pathfinder",
-            "LT_SE_Demoman",
-            "LT_SE_Autorifleman",
-            "LT_SE_GPMG",
-            "LT_SE_AT",
-            "LT_SE_AA"
+            "LT_SF_Rifleman",
+            "LT_SF_Rifleman_GL",
+            "LT_SF_Scout",
+            "LT_SF_Medic",
+            "LT_SF_Marksman",
+            "LT_SF_Pathfinder",
+            "LT_SF_Demoman",
+            "LT_SF_Autorifleman",
+            "LT_SF_GPMG",
+            "LT_SF_AT",
+            "LT_SF_AA"
 		};
 	};
 };
 class CfgVehicles {
     class LT_Base;
 
-    class LT_SE_Rifleman : LT_Base {
+    class LT_SF_Rifleman : LT_Base {
         displayName = "Recon Rifleman";
         scope = 2;
         scopeCurator = 2;
@@ -48,25 +48,25 @@ class CfgVehicles {
 			"rhsusf\addons\rhsusf_infantry2\data\Merrells_blk_co.paa",
 			"rhsusf\addons\rhsusf_infantry2\data\Mechanix_black_co.paa"
 		};
-        backpack = "B_LT_AssaultSE";
+        backpack = "B_LT_Assault_SF";
         weapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         magazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
         respawnMagazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
         linkedItems[] = {
@@ -90,32 +90,32 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_SE_Rifleman_GL : LT_SE_Rifleman {
+    class LT_SF_Rifleman_GL : LT_SF_Rifleman {
         displayName = "Recon Rifleman (GL)";
         weapons[] = {
-            "W_LT_G36K_GL",
+            "W_LT_HK416_GL",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_G36K_GL",
+            "W_LT_HK416_GL",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         magazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_10(1Rnd_HE_Grenade_shell),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
         respawnMagazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_10(1Rnd_HE_Grenade_shell),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
     };
-    class LT_SE_Scout : LT_SE_Rifleman {
+    class LT_SF_Scout : LT_SF_Rifleman {
         displayName = "Recon Scout";
         weapons[] = {
             "W_LT_ASVAL",
@@ -158,7 +158,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_SE_Medic : LT_SE_Rifleman {
+    class LT_SF_Medic : LT_SF_Rifleman {
         displayName = "Recon Medic";
         icon="iconManMedic";
         attendant = 1;
@@ -200,7 +200,7 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_SE_Marksman : LT_SE_Rifleman {
+    class LT_SF_Marksman : LT_SF_Rifleman {
         displayName = "Recon Marksman";
         weapons[] = {
             "W_LT_SCARH_DMR",
@@ -215,15 +215,15 @@ class CfgVehicles {
             "Put"
         };
         magazines[] = {
-            MAG_7(rhs_mag_20Rnd_SCAR_762x51_m62_tracer_bk), 
+            MAG_7(rhs_mag_20Rnd_SCAR_762x51_m62_tracer), 
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
         respawnMagazines[] = {
-            MAG_7(rhs_mag_20Rnd_SCAR_762x51_m62_tracer_bk), 
+            MAG_7(rhs_mag_20Rnd_SCAR_762x51_m62_tracer), 
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
     };
-    class LT_SE_Pathfinder : LT_SE_Rifleman {
+    class LT_SF_Pathfinder : LT_SF_Rifleman {
         displayName = "Recon Pathfinder";
         weapons[] = {
             "W_LT_M82A1",
@@ -246,7 +246,7 @@ class CfgVehicles {
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
     };
-    class LT_SE_Demoman : LT_SE_Rifleman {
+    class LT_SF_Demoman : LT_SF_Rifleman {
         displayName = "Demolitions Expert";
         weapons[] = {
             "rhs_weap_m32",
@@ -290,17 +290,17 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_SE_Autorifleman : LT_SE_Rifleman {
+    class LT_SF_Autorifleman : LT_SF_Rifleman {
         displayName = "Recon Autorifleman";
-        backpack = "B_LT_Carryall_Auto_SE";
+        backpack = "B_LT_Carryall_Auto_SF";
         weapons[] = {
-            "W_LT_M249_SE",
+            "W_LT_M249_SF",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_M249_SE",
+            "W_LT_M249_SF",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
@@ -314,17 +314,17 @@ class CfgVehicles {
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
     };
-    class LT_SE_GPMG : LT_SE_Rifleman {
+    class LT_SF_GPMG : LT_SF_Rifleman {
         displayName = "Recon Machinegunner";
-        backpack = "B_LT_Carryall_GPMG_SE";
+        backpack = "B_LT_Carryall_GPMG_SF";
         weapons[] = {
-            "W_LT_Negev_SE",
+            "W_LT_Negev_SF",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_Negev_SE",
+            "W_LT_Negev_SF",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
@@ -338,82 +338,63 @@ class CfgVehicles {
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ)
         };
     };
-    class LT_SE_AT : LT_SE_Rifleman {
+    class LT_SF_AT : LT_SF_Rifleman {
         displayName = "Recon Anti-Tank Specialist";
         icon="iconManAT";
         backpack = "B_LT_Carryall_AT";
         weapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhs_weap_fim92",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhs_weap_fim92",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         magazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ),
             "rhs_fim92_mag"
         };
         respawnMagazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ),
             "rhs_fim92_mag"
         };
     };
-    class LT_SE_AA : LT_SE_Rifleman {
+    class LT_SF_AA : LT_SF_Rifleman {
         displayName = "Recon Anti-Air Specialist";
         icon="iconManAT";
         weapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhs_weap_smaw",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         respawnWeapons[] = {
-            "W_LT_G36K",
+            "W_LT_HK416",
             "rhs_weap_smaw",
             "rhsusf_weap_glock17g4",
             "Throw",
             "Put"
         };
         magazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ),
             "rhs_mag_smaw_HEDP"
         };
         respawnMagazines[] = {
-            MAG_7(rhssaf_30rnd_556x45_SOST_G36),
+            MAG_7(rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red),
             MAG_3(rhsusf_mag_17Rnd_9x19_FMJ),
             "rhs_mag_smaw_HEDP"
         };
     };
-    /*class LT_SE_Minigun : LT_SE_Rifleman {
-        displayName = "Minigunner";
-        weapons[] = {
-            "HLC_wp_M134Painless",
-            "Throw",
-            "Put"
-        };
-        respawnWeapons[] = {
-            "HLC_wp_M134Painless",
-            "Throw",
-            "Put"
-        };
-        magazines[] = {
-            "hlc_500rnd_762x51_Belt"
-        };
-        respawnMagazines[] = {
-            "hlc_500rnd_762x51_Belt"
-        };
-    };*/
 };
 class CfgMods {
 	author="johnyF";

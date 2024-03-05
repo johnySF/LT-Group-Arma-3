@@ -10,16 +10,14 @@ class CfgPatches {
 		requiredVersion=0.1;
 		requiredAddons[] = {
             "A3_Characters_F",
-            "A3_Weapons_F",
             "A3_Characters_F_Enoch",
+            "A3_Weapons_F",
             "A3_Air_F",
             "A3_Air_F_Jets",
             "rhsusf_c_troops",
             "rhsusf_c_weapons",
             "rhs_c_weapons",
             "rhsgref_c_weapons",
-            "rhssaf_c_weapons",
-            "rhssaf_c_vehicles",
             "CUP_Weapons_NVG",
             "CUP_Creatures_Military_PMC",
             "CUP_Wheeled_SUV",
@@ -69,7 +67,7 @@ class CfgVehicles {
             ITEM_XX(CUP_NVG_PVS7,1);
         };
 	};
-    class B_LT_AssaultSE : B_AssaultPack_blk {
+    class B_LT_Assault_SF : B_AssaultPack_blk {
         scope = 1;
 		class TransportMagazines {
 			MAG_XX(ACE_M84, 2);
@@ -102,13 +100,13 @@ class CfgVehicles {
     };
     class B_LT_Carryall_Auto : B_LT_Carryall {
         class TransportMagazines {
-			MAG_XX(rhssaf_100rnd_556x45_EPR_G36,5);
+			MAG_XX(rhs_45Rnd_545X39_7N22_AK, 7);
             MAG_XX(SmokeShell, 3);
 		};
     };
-    class B_LT_Carryall_Auto_SE : B_LT_Carryall {
+    class B_LT_Carryall_Auto_SF : B_LT_Carryall {
         class TransportMagazines {
-			MAG_XX(rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote,5);
+			MAG_XX(rhs_45Rnd_545X39_7N22_AK, 7);
             MAG_XX(SmokeShell, 3);
 		};
     };
@@ -117,7 +115,7 @@ class CfgVehicles {
 			MAG_XX(rhs_100Rnd_762x54mmR_green,5);
         };
     }
-    class B_LT_Carryall_GPMG_SE : B_LT_Carryall {
+    class B_LT_Carryall_GPMG_SF : B_LT_Carryall {
         class TransportMagazines {
 			MAG_XX(150Rnd_762x54_Box_Tracer,5);
         };
@@ -155,26 +153,15 @@ class CfgVehicles {
         };
         identityTypes[] = {
             "LanguageENG_F",
-            "Head_NATO",
+            "Head_NATO"
         };
     };
 }; // CfgVehicles
 class CfgWeapons {
     class UniformItem;
-    class CUP_I_B_PMC_Unit_17;
     class U_B_PilotCoveralls;
     class U_I_FullGhillie_sard;
     class rhs_uniform_g3_blk;
-    class U_LT_PMC : CUP_I_B_PMC_Unit_17 {
-        scope = 1;
-        class ItemInfo : UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "LT_Rifleman";
-			containerClass = "Supply40";
-			mass = 20;
-		};
-    };
     class U_LT_Pilot : U_B_PilotCoveralls {
         scope = 1;
         class ItemInfo : UniformItem
@@ -200,7 +187,7 @@ class CfgWeapons {
         class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="LT_SE_Rifleman";
+			uniformClass="LT_SF_Rifleman";
 			containerClass="Supply40";
 			mass=40;
 		};
@@ -209,6 +196,7 @@ class CfgWeapons {
     class rhs_weap_vhsd2;
     class SMG_03C_TR_black;
     class rhs_weap_vhsd2_bg;
+    class rhs_weap_rpk74m_npz;
     class rhs_weap_vss;
     class rhs_weap_t5000;
     class W_LT_VHSD2_Holo : rhs_weap_vhsd2 {
@@ -235,6 +223,14 @@ class CfgWeapons {
 			};
 		};
     };
+    class W_LT_RPK74 : rhs_weap_rpk74m_npz {
+        class LinkedItems {
+			class LinkedItemsOptic {
+				slot="CowsSlot";
+				item="rhsusf_acc_ACOG_USMC";
+			};
+		};
+    };
     class W_LT_VSS : rhs_weap_vss {
         class LinkedItems {
 			class LinkedItemsOptic {
@@ -250,16 +246,16 @@ class CfgWeapons {
 				item="rhsusf_acc_nxs_3515x50_md";
 			};
 		};
-    }
+    };
     
-    class rhs_weap_g36kv;
-    class rhs_weap_g36kv_ag36;
+    class rhs_weap_hk416d145;
+    class rhs_weap_hk416d145_m320;
     class rhs_weap_asval;
-    class rhs_weap_SCARH_LB;
+    class rhs_weap_mk17_LB;
     class rhs_weap_m249_light_L;
     class LMG_Zafir_F;
     class rhs_weap_m82a1;
-    class W_LT_G36K : rhs_weap_g36kv {
+    class W_LT_HK416 : rhs_weap_hk416d145 {
         class LinkedItems {
 			class LinkedItemsOptic {
 				slot="CowsSlot";
@@ -275,7 +271,7 @@ class CfgWeapons {
             }
 		};
     };
-    class W_LT_G36K_GL : rhs_weap_g36kv_ag36 {
+    class W_LT_HK416_GL : rhs_weap_hk416d145_m320 {
         class LinkedItems {
 			class LinkedItemsOptic {
 				slot="CowsSlot";
@@ -295,7 +291,7 @@ class CfgWeapons {
 			};
 		};
     };
-    class W_LT_SCARH_DMR : rhs_weap_SCARH_LB {
+    class W_LT_SCARH_DMR : rhs_weap_mk17_LB {
         class LinkedItems {
 			class LinkedItemsOptic {
 				slot="CowsSlot";
@@ -303,7 +299,7 @@ class CfgWeapons {
 			};
 		};
     };
-    class W_LT_M249_SE : rhs_weap_m249_light_L {
+    class W_LT_M249_SF : rhs_weap_m249_light_L {
         class LinkedItems {
 			class LinkedItemsOptic {
 				slot="CowsSlot";
@@ -319,7 +315,7 @@ class CfgWeapons {
             }
 		};
     };
-    class W_LT_Negev_SE : LMG_Zafir_F {
+    class W_LT_Negev_SF : LMG_Zafir_F {
         class LinkedItems {
 			class LinkedItemsOptic {
 				slot="CowsSlot";
@@ -432,146 +428,146 @@ class CfgGroups {
 						position[]={4,-4,0};
                     };
                 };
-                class G_LT_SE_ReconPatrol {
+                class G_LT_SF_ReconPatrol {
                     name = "Recon Patrol";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_SE_Rifleman";
+						vehicle="LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Medic";
+						vehicle="LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                 };
-                class G_LT_SE_ReconSentry {
+                class G_LT_SF_ReconSentry {
                     name = "Recon Sentry";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                 };
-                class G_LT_SE_ReconSquad {
+                class G_LT_SF_ReconSquad {
                     name = "Recon Squad";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_SE_Rifleman";
+						vehicle="LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Medic";
+						vehicle="LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_AT";
+						vehicle="LT_SF_AT";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Demoman";
+						vehicle="LT_SF_Demoman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit6 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit7 {
                         side=0;
-						vehicle="LT_SE_Pathfinder";
+						vehicle="LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                 };
-                class G_LT_SE_ReconTeam {
+                class G_LT_SF_ReconTeam {
                     name = "Recon Team";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_SE_Rifleman";
+						vehicle="LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Medic";
+						vehicle="LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_SE_Demoman";
+						vehicle="LT_SF_Demoman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
@@ -753,266 +749,266 @@ class CfgGroups {
             }; // Infantry
             class Infantry_Hazmat {
                 name = "Infantry (HAZMAT)";
-                class G_LT_C_AATeam {
+                class G_LT_AATeam_H {
                     name = "Air-Defense (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_AA";
+						vehicle="LT_AA_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_AA";
+						vehicle="LT_AA_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                 };
-                class G_LT_C_ATTeam {
+                class G_LT_ATTeam_H {
                     name = "Anti-Armor Team (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_AT";
+						vehicle="LT_AT_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_AT";
+						vehicle="LT_AT_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                 };
-                class G_LT_C_FireTeam {
+                class G_LT_FireTeam_H {
                     name = "Fire Team (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_Autorifleman";
+						vehicle="LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_AT";
+						vehicle="LT_AT_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                 };
-                class G_LT_C_RifleSquad {
+                class G_LT_RifleSquad_H {
                     name = "Rifle Squad (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_AT";
+						vehicle="LT_AT_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_C_Marksman";
+						vehicle="LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit6 {
                         side=0;
-						vehicle="LT_C_Autorifleman";
+						vehicle="LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit7 {
                         side=0;
-						vehicle="LT_C_Medic";
+						vehicle="LT_Medic_H";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                 };
-                class G_LT_C_Sentry {
+                class G_LT_Sentry_H {
                     name = "Sentry (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                 };
-                class G_LT_C_SniperTeam {
+                class G_LT_SniperTeam_H {
                     name = "Sniper Team (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Sniper";
+						vehicle="LT_Sniper_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_Marksman";
+						vehicle="LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                 };
-                class G_LT_C_WeaponsSquad {
+                class G_LT_WeaponsSquad_H {
                     name = "Weapons Squad (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_Rifleman_GL";
+						vehicle="LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_GPMG";
+						vehicle="LT_GPMG_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_C_GPMG";
+						vehicle="LT_GPMG_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_C_Marksman";
+						vehicle="LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit6 {
                         side=0;
-						vehicle="LT_C_Autorifleman";
+						vehicle="LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit7 {
                         side=0;
-						vehicle="LT_C_Medic";
+						vehicle="LT_Medic_H";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                 };
-                class G_LT_C_CQB {
+                class G_LT_CQB_H {
                     name = "CQB Team (HAZMAT)";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
                     side = 0;
                     class unit0 {
                         side=0;
-						vehicle="LT_C_Scout";
+						vehicle="LT_Scout_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_C_Scout";
+						vehicle="LT_Scout_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_C_Engineer";
+						vehicle="LT_Engineer_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_C_Rifleman";
+						vehicle="LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
@@ -1128,7 +1124,7 @@ class CfgGroups {
 						position[]={14,-14,0};
                     };
                 };
-                class G_LT_SE_ReconPatrolM {
+                class G_LT_SF_ReconPatrolM {
 				    name = "Motorized Recon Patrol";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
@@ -1141,24 +1137,24 @@ class CfgGroups {
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_GPMG";
+						vehicle="LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                 };
-                class G_LT_SE_ReconTeamM {
+                class G_LT_SF_ReconTeamM {
 				name = "Motorized Recon Team";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
@@ -1171,36 +1167,36 @@ class CfgGroups {
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_GPMG";
+						vehicle="LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_SE_GPMG";
+						vehicle="LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_SE_Pathfinder";
+						vehicle="LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                 };
-                class G_LT_SE_ReconSquadM {
+                class G_LT_SF_ReconSquadM {
 				    name = "Motorized Recon Squad";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
@@ -1213,48 +1209,48 @@ class CfgGroups {
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_Autorifleman";
+						vehicle="LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Medic";
+						vehicle="LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_SE_GPMG";
+						vehicle="LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit6 {
                         side=0;
-						vehicle="LT_SE_Pathfinder";
+						vehicle="LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                     class unit7 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={10,-10,0};
                     };
                 };
-                class G_LT_SE_AssaultTeamM {
+                class G_LT_SF_AssaultTeamM {
                     name = "Motorized Recon Assault Team";
 					icon="\A3\ui_f\data\map\markers\nato\n_inf.paa";
                     faction = "LT_Group";
@@ -1267,43 +1263,43 @@ class CfgGroups {
                     };
                     class unit1 {
                         side=0;
-						vehicle="LT_SE_Rifleman_GL";
+						vehicle="LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
                     };
                     class unit2 {
                         side=0;
-						vehicle="LT_SE_Autorifleman";
+						vehicle="LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
                     };
                     class unit3 {
                         side=0;
-						vehicle="LT_SE_Medic";
+						vehicle="LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
                     };
                     class unit4 {
                         side=0;
-						vehicle="LT_SE_Marksman";
+						vehicle="LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
                     };
                     class unit5 {
                         side=0;
-						vehicle="LT_SE_GPMG";
+						vehicle="LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
                     };
                     class unit6 {
                         side=0;
-						vehicle="LT_SE_Autorifleman";
+						vehicle="LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={8,-8,0};
                     };
                     class unit7 {
                         side=0;
-						vehicle="LT_SE_Scout";
+						vehicle="LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={10,-10,0};
                     };

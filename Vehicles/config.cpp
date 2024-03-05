@@ -33,8 +33,8 @@ class CfgPatches {
 };
 class CfgVehicles {
     // For inheritance
-    class rhssaf_army_o_m1025_olive;
-    class rhssaf_army_o_m1025_olive_m2;
+    class rhsgref_hidf_m1025;
+    class rhsgref_hidf_m1025_m2;
     class CUP_I_SUV_ION;
     class CUP_I_SUV_Armored_ION;
     class CUP_I_Van_Transport_ION;
@@ -54,7 +54,7 @@ class CfgVehicles {
     //class RHS_ZU23_VDV;
 
     // Ground Vehicles
-    class V_LT_M1052 : rhssaf_army_o_m1025_olive {
+    class V_LT_M1052 : rhsgref_hidf_m1025 {
         side = 0;
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
@@ -78,7 +78,7 @@ class CfgVehicles {
             ITEM_XX(FirstAidKit, 10);
 		};
     };
-    class V_LT_M1052_M2 : rhssaf_army_o_m1025_olive_m2 {
+    class V_LT_M1052_M2 : rhsgref_hidf_m1025_m2 {
         side = 0;
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
@@ -106,12 +106,12 @@ class CfgVehicles {
         side = 0;
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
-        crew = "LT_SE_Rifleman";
+        crew = "LT_SF_Rifleman";
         typicalCargo[] = {
-            "LT_SE_Rifleman",
-            "LT_SE_Scout",
-            "LT_SE_Rifleman_GL",
-            "LT_SE_Autorifleman"
+            "LT_SF_Rifleman",
+            "LT_SF_Scout",
+            "LT_SF_Rifleman_GL",
+            "LT_SF_Autorifleman"
         };
         class TransportBackpacks {};
 		class TransportMagazines {
@@ -130,12 +130,12 @@ class CfgVehicles {
         side = 0;
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
-        crew = "LT_SE_Rifleman";
+        crew = "LT_SF_Rifleman";
         typicalCargo[] = {
-            "LT_SE_Rifleman",
-            "LT_SE_Scout",
-            "LT_SE_Rifleman_GL",
-            "LT_SE_Autorifleman"
+            "LT_SF_Rifleman",
+            "LT_SF_Scout",
+            "LT_SF_Rifleman_GL",
+            "LT_SF_Autorifleman"
         };
         class TransportBackpacks {};
 		class TransportMagazines {
@@ -287,7 +287,7 @@ class CfgVehicles {
         typicalCargo[] = {
             "LT_HeliPilot",
             "LT_Rifleman",
-            "LT_SE_Rifleman"
+            "LT_SF_Rifleman"
         };
     };
     class V_LT_MI24 : CUP_I_Mi24_D_Dynamic_ION {
@@ -305,7 +305,7 @@ class CfgVehicles {
         typicalCargo[] = {
             "LT_HeliPilot",
             "LT_Rifleman",
-            "LT_SE_Rifleman"
+            "LT_SF_Rifleman"
         };
     };
     class V_LT_MV22 : CUP_B_MV22_USMC_RAMPGUN {
@@ -314,7 +314,7 @@ class CfgVehicles {
         crew = "LT_HeliPilot";
         typicalCargo[] = {
             "LT_HeliPilot",
-            "LT_SE_Rifleman"
+            "LT_SF_Rifleman"
         };
         hiddenSelections[] = {
 			"camo1",
