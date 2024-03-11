@@ -5,14 +5,18 @@
 #define WEAP_XX(a,b) class _xx_##a { weapon = a; count = b; }
 #define ITEM_XX(a,b) class _xx_##a { name = a; count = b; }
 
-class CfgPatches {
-	class LT_Units {
+class CfgPatches
+{
+	class LT_Units
+    {
 		weapons[] = {};
 		requiredVersion=0.1;
-		requiredAddons[] = {
+		requiredAddons[] =
+        {
             "LiontoothGroup"
         };
-		units[] = {
+		units[] =
+        {
             "LT_Rifleman",
             "LT_Officer",
             "LT_Scout",
@@ -42,10 +46,12 @@ class CfgPatches {
 		};
 	};
 };
-class CfgVehicles {
+class CfgVehicles
+{
     class LT_Base;
 
-    class LT_Rifleman : LT_Base {
+    class LT_Rifleman : LT_Base
+    {
         displayName = "Rifleman";
         scope = 2;
         scopeCurator = 2;
@@ -56,34 +62,41 @@ class CfgVehicles {
         editorSubcategory = "EdSubcat_Personnel";
 		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
         uniformClass = "U_OG_Guerilla2_3";
-		hiddenSelections[] = {
+		hiddenSelections[] =
+        {
 			"camo"
 		};
-		hiddenSelectionsTextures[] = {
+		hiddenSelectionsTextures[] =
+        {
 			"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla2_3_co.paa"
 		};
         backpack = "B_LT_AssaultPack";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -92,7 +105,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -102,9 +116,11 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Officer : LT_Rifleman {
+    class LT_Officer : LT_Rifleman
+    {
         displayName = "Officer";
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_SLA_BeretRed",
             "ItemMap",
@@ -112,7 +128,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_SLA_BeretRed",
             "ItemMap",
@@ -121,31 +138,37 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Scout : LT_Rifleman {
+    class LT_Scout : LT_Rifleman
+    {
         displayName = "Scout";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_P90_Reflex",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_P90_Reflex",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(50Rnd_570x28_SMG_03), 
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(ACE_M84)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(50Rnd_570x28_SMG_03), 
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(ACE_M84)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_PMC_Cap_Back_EP_Grey",
             "G_Shades_Black",
@@ -154,7 +177,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_PMC_Cap_Back_EP_Grey",
             "G_Shades_Black",
@@ -164,31 +188,37 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Rifleman_GL : LT_Rifleman {
+    class LT_Rifleman_GL : LT_Rifleman
+    {
         displayName = "Grenadier";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_GL",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_GL",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t),
             MAG_10(1Rnd_HE_Grenade_shell),
             MAG_3(9Rnd_45ACP_Mag)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t),
             MAG_10(1Rnd_HE_Grenade_shell),
             MAG_3(9Rnd_45ACP_Mag)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Grenadier",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -197,7 +227,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Grenadier",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -207,30 +238,36 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Autorifleman : LT_Rifleman {
+    class LT_Autorifleman : LT_Rifleman
+    {
         displayName = "Autorifleman";
         backpack = "B_LT_Carryall_Auto";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_RPK74",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_RPK74",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             "rhs_45Rnd_545X39_7N22_AK", 
             MAG_3(9Rnd_45ACP_Mag)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             "rhs_45Rnd_545X39_7N22_AK", 
             MAG_3(9Rnd_45ACP_Mag)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -239,7 +276,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -249,95 +287,112 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_GPMG : LT_Autorifleman {
+    class LT_GPMG : LT_Autorifleman
+    {
         displayName = "Machinegunner";
         backpack = "B_LT_Carryall_GPMG";
-        weapons[] = {
+        weapons[] =
+        {
             "rhs_weap_pkp",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "rhs_weap_pkp",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             "rhs_100Rnd_762x54mmR_green",
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(SmokeShell)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             "rhs_100Rnd_762x54mmR_green",
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(SmokeShell)
         };
     };
-    class LT_AT : LT_Rifleman {
+    class LT_AT : LT_Rifleman
+    {
         displayName = "Anti-Tank Specialist";
         icon="iconManAT";
         backpack = "B_LT_Carryall_AT";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "rhs_weap_smaw",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "rhs_weap_smaw",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_mag_smaw_HEDP"
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_mag_smaw_HEDP"
         };
     };
-    class LT_AA : LT_Rifleman {
+    class LT_AA : LT_Rifleman
+    {
         displayName = "Anti-Air Specialist";
         icon="iconManAT";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "rhs_weap_fim92",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "rhs_weap_fim92",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_fim92_mag"
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_fim92_mag"
         };
     };
-    class LT_Medic : LT_Rifleman {
+    class LT_Medic : LT_Rifleman
+    {
         displayName = "Medic";
         icon="iconManMedic";
         attendant = 1;  // Can this character heal soldiers?
         backpack = "B_LT_MedicalPack";
-        items[] = {
+        items[] =
+        {
             MAG_10(ACE_elasticBandage),
             MAG_10(ACE_packingBandage),
             MAG_10(ACE_quikclot),
@@ -345,7 +400,8 @@ class CfgVehicles {
             MAG_3(ACE_epinephrine),
             MAG_3(ACE_morphine)
         };
-        respawnItems[] = {
+        respawnItems[] =
+        {
             MAG_10(ACE_elasticBandage),
             MAG_10(ACE_packingBandage),
             MAG_10(ACE_quikclot),
@@ -353,7 +409,8 @@ class CfgVehicles {
             MAG_3(ACE_epinephrine),
             MAG_3(ACE_morphine)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "V_TacVestIR_blk",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -362,7 +419,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "V_TacVestIR_blk",
             "CUP_H_OpsCore_Black",
             "CUP_G_ESS_BLK_Dark",
@@ -372,37 +430,43 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Engineer : LT_Rifleman {
+    class LT_Engineer : LT_Rifleman
+    {
         displayName = "Engineer";
         icon = "iconManEngineer";
         engineer = 1;               // Can this character repair vehicles?
         canDeactivateMines = 1;		// Can this character deactivate mines?
 	
-        weapons[] = {
+        weapons[] =
+        {
             "rhs_weap_M590_8RD",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "rhs_weap_M590_8RD",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_3(rhsusf_8Rnd_Slug),
             MAG_3(rhsusf_8Rnd_00Buck),
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(ACE_M84)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_3(rhsusf_8Rnd_Slug),
             MAG_3(rhsusf_8Rnd_00Buck),
             MAG_3(9Rnd_45ACP_Mag),
             MAG_3(ACE_M84)
         };
-        items[] = {
+        items[] =
+        {
             MAG_3(ACE_elasticBandage),
             MAG_3(ACE_packingBandage),
             MAG_3(ACE_quikclot),
@@ -411,7 +475,8 @@ class CfgVehicles {
             "ACE_DefusalKit",
             "MineDetector"
         };
-        respawnItems[] = {
+        respawnItems[] =
+        {
             MAG_3(ACE_elasticBandage),
             MAG_3(ACE_packingBandage),
             MAG_3(ACE_quikclot),
@@ -421,64 +486,77 @@ class CfgVehicles {
             "MineDetector"
         };
     };
-    class LT_Marksman : LT_Rifleman {
+    class LT_Marksman : LT_Rifleman
+    {
         displayName = "Marksman";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VSS",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VSS",
             "hgun_ACPC2_F",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhs_20rnd_9x39mm_SP6),
             MAG_3(9Rnd_45ACP_Mag)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhs_20rnd_9x39mm_SP6),
             MAG_3(9Rnd_45ACP_Mag)
         };
     };
-    class LT_Sniper : LT_Rifleman {
+    class LT_Sniper : LT_Rifleman
+    {
         displayName = "Sniper";
         model = "\A3\Characters_F_Mark\INDEP\i_fullghillie_f.p3d";
         uniformClass = "U_LT_Ghillie";
-        hiddenSelections[] = {
+        hiddenSelections[] =
+        {
 			"camo",
 			"camo3",
 			"camo4"
 		};
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\A3\Characters_F_Mark\INDEP\Data\ghillie_coverall_aaf_co.paa",
 			"\A3\Characters_F_Mark\Common\Data\ghillie_threads_sard_ca.paa",
 			"\A3\Characters_F_Mark\Common\Data\ghillie_threads_5LOD_sard_co.paa"
 		};
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_T5000",
             "rhs_weap_pp2000_folded",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_T5000",
             "rhs_weap_pp2000_folded",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhs_5Rnd_338lapua_t5000),
             MAG_3(rhs_mag_9x19mm_7n21_20)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhs_5Rnd_338lapua_t5000),
             MAG_3(rhs_mag_9x19mm_7n21_20)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "V_Chestrig_oli",
             "CUP_H_PMC_EP_Headset",
             "G_Balaclava_Flecktarn",
@@ -487,7 +565,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "V_Chestrig_oli",
             "CUP_H_PMC_EP_Headset",
             "G_Balaclava_Flecktarn",
@@ -497,11 +576,13 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Crewman : LT_Rifleman {
+    class LT_Crewman : LT_Rifleman
+    {
         displayName = "Crewman";
         backpack = "B_LT_Legstrap";
         engineer = 1;
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Veh",
             "CUP_H_CZ_Helmet05",
             "CUP_G_ESS_BLK_Dark",
@@ -510,7 +591,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Veh",
             "CUP_H_CZ_Helmet05",
             "CUP_G_ESS_BLK_Dark",
@@ -520,32 +602,39 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Pilot : LT_Rifleman {
+    class LT_Pilot : LT_Rifleman
+    {
         displayName = "Pilot";
         model = "\A3\characters_F\Common\pilot_f.p3d";
         uniformClass = "U_LT_Pilot";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 		    "\A3\Characters_F\Common\Data\pilot_suit_nato_co.paa",
 		};
         backpack = "B_LT_Legstrap";
         engineer = 1;
-        weapons[] = {
+        weapons[] =
+        {
             "rhs_weap_pp2000",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "rhs_weap_pp2000",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_3(rhs_mag_9x19mm_7n21_20)
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_3(rhs_mag_9x19mm_7n21_20)
         };
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "RHS_jetpilot_usaf",
             "ItemMap",
             "ItemGPS",
@@ -553,7 +642,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "RHS_jetpilot_usaf",
             "ItemMap",
             "ItemGPS",
@@ -562,9 +652,11 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_HeliPilot : LT_Crewman {
+    class LT_HeliPilot : LT_Crewman
+    {
         displayName = "Helicopter Pilot";
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Veh",
             "H_PilotHelmetHeli_B",
             "ItemMap",
@@ -573,7 +665,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Veh",
             "H_PilotHelmetHeli_B",
             "ItemMap",
@@ -584,15 +677,18 @@ class CfgVehicles {
         };
     };
 
-    class LT_Rifleman_H : LT_Rifleman {
+    class LT_Rifleman_H : LT_Rifleman
+    {
         displayName = "Rifleman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -601,7 +697,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -611,15 +708,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Scout_H : LT_Scout {
+    class LT_Scout_H : LT_Scout
+    {
         displayName = "Scout (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_PMC_EP_Headset",
             "G_AirPurifyingRespirator_01_F",
@@ -628,7 +728,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_PMC_EP_Headset",
             "G_AirPurifyingRespirator_01_F",
@@ -638,15 +739,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Rifleman_GL_H : LT_Rifleman_GL {
+    class LT_Rifleman_GL_H : LT_Rifleman_GL
+    {
         displayName = "Grenadier (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Grenadier",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -655,7 +759,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Grenadier",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -665,15 +770,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Autorifleman_H : LT_Autorifleman {
+    class LT_Autorifleman_H : LT_Autorifleman
+    {
         displayName = "Autorifleman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -682,7 +790,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -692,15 +801,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_GPMG_H : LT_GPMG {
+    class LT_GPMG_H : LT_GPMG
+    {
         displayName = "Machinegunner (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -709,7 +821,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Empty",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -719,44 +832,52 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_AT_H : LT_Rifleman_H {
+    class LT_AT_H : LT_Rifleman_H
+    {
         displayName = "Anti-Tank Specialist (HAZMAT)";
         backpack = "B_LT_Carryall_AT";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "rhs_weap_smaw",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "rhs_weap_smaw",
             "Throw",
             "Put"
         };
-        magazines[] = {
+        magazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_mag_smaw_HEDP"
         };
-        respawnMagazines[] = {
+        respawnMagazines[] =
+        {
             MAG_7(rhsgref_30rnd_556x45_vhs2_t), 
             MAG_3(9Rnd_45ACP_Mag),
             "rhs_mag_smaw_HEDP"
         };
     };
-    class LT_AA_H : LT_Rifleman_H {
+    class LT_AA_H : LT_Rifleman_H
+    {
         displayName = "Anti-Air Specialist (HAZMAT)";
-        weapons[] = {
+        weapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "rhs_weap_fim92",
             "Throw",
             "Put"
         };
-        respawnWeapons[] = {
+        respawnWeapons[] =
+        {
             "W_LT_VHSD2_Holo",
             "hgun_ACPC2_F",
             "rhs_weap_fim92",
@@ -764,15 +885,18 @@ class CfgVehicles {
             "Put"
         };
     };
-    class LT_Medic_H : LT_Medic {
+    class LT_Medic_H : LT_Medic
+    {
         displayName = "Medic (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "V_TacVestIR_blk",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -781,7 +905,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "V_TacVestIR_blk",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -791,15 +916,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Engineer_H : LT_Engineer {
+    class LT_Engineer_H : LT_Engineer
+    {
         displayName = "Engineer (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -808,7 +936,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -818,15 +947,18 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Marksman_H : LT_Marksman {
+    class LT_Marksman_H : LT_Marksman
+    {
         displayName = "Marksman (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
         model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
         uniformClass = "U_O_R_Gorka_01_black_F";
-        hiddenSelectionsTextures[] = {
+        hiddenSelectionsTextures[] =
+        {
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
 		};
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -835,7 +967,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "CUP_V_PMC_CIRAS_Black_Patrol",
             "CUP_H_OpsCore_Black",
             "G_AirPurifyingRespirator_01_F",
@@ -845,10 +978,12 @@ class CfgVehicles {
             "ItemRadio"
         };
     };
-    class LT_Sniper_H : LT_Sniper {
+    class LT_Sniper_H : LT_Sniper
+    {
         displayName = "Sniper (HAZMAT)";
         editorSubcategory = "LT_E_Chem";
-        linkedItems[] = {
+        linkedItems[] =
+        {
             "V_Chestrig_oli",
             "CUP_H_PMC_EP_Headset",
             "G_AirPurifyingRespirator_01_F",
@@ -857,7 +992,8 @@ class CfgVehicles {
             "ItemWatch",
             "ItemRadio"
         };
-        respawnLinkedItems[] = {
+        respawnLinkedItems[] =
+        {
             "V_Chestrig_oli",
             "CUP_H_PMC_EP_Headset",
             "G_AirPurifyingRespirator_01_F",
@@ -868,6 +1004,7 @@ class CfgVehicles {
         };
     };
 };
-class CfgMods {
+class CfgMods
+{
 	author="johnyF";
 };
