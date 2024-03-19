@@ -8,12 +8,10 @@ class CfgPatches
     {
 	weapons[] = {};
 	requiredVersion=0.1;
-	requiredAddons[] =
-        {
+	requiredAddons[] = {
             "LiontoothGroup"
         };
-	units[] =
-        {
+	units[] = {
             "V_LT_UAZ",
             "V_LT_UAZ_DSHKM",
             "V_LT_M1025",
@@ -68,8 +66,7 @@ class CfgVehicles
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
         crew = "LT_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Rifleman",
             "LT_Scout",
             "LT_Rifleman_GL",
@@ -97,8 +94,7 @@ class CfgVehicles
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
         crew = "LT_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Rifleman",
             "LT_Scout",
             "LT_Rifleman_GL",
@@ -126,8 +122,7 @@ class CfgVehicles
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
         crew = "LT_SF_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_SF_Rifleman",
             "LT_SF_Scout",
             "LT_SF_Rifleman_GL",
@@ -155,8 +150,7 @@ class CfgVehicles
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Cars";
         crew = "LT_SF_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_SF_Rifleman",
             "LT_SF_Scout",
             "LT_SF_Rifleman_GL",
@@ -183,8 +177,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Rifleman",
             "LT_Scout",
             "LT_Rifleman_GL",
@@ -211,8 +204,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Rifleman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Rifleman",
             "LT_Scout",
             "LT_Rifleman_GL",
@@ -239,8 +231,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Crewman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Crewman",
             "LT_Rifleman",
             "LT_Scout",
@@ -268,8 +259,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Crewman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Crewman"
         };
     };
@@ -280,8 +270,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Crewman";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Crewman",
             "LT_Rifleman",
             "LT_Scout",
@@ -309,8 +298,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_HeliPilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_HeliPilot",
             "LT_Rifleman",
             "LT_Scout",
@@ -339,18 +327,17 @@ class CfgVehicles
         displayName = "Gripen (Liontooth)";
         faction = "LT_Group";
         crew = "LT_Pilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
         	"LT_Pilot"
         };
-        hiddenSelectionsTextures[] =  // If I find a better way, use it to change the default skin
-        {
-		"a3\air_f_jets\plane_fighter_04\data\Fighter_04_fuselage_01_gray_co.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Fighter_04_fuselage_02_gray_co.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Fighter_04_misc_01_co.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_08_ca.paa"
+	// If I find a better way, use it to change the default skin
+        hiddenSelectionsTextures[] = {
+	    "a3\air_f_jets\plane_fighter_04\data\Fighter_04_fuselage_01_gray_co.paa",
+	    "a3\air_f_jets\plane_fighter_04\data\Fighter_04_fuselage_02_gray_co.paa",
+	    "a3\air_f_jets\plane_fighter_04\data\Fighter_04_misc_01_co.paa",
+	    "a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
+	    "a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
+	    "a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_08_ca.paa"
 	};
     };
     class V_LT_L159 : I_Plane_Fighter_03_dynamicLoadout_F
@@ -358,8 +345,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_Pilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_Pilot"
         };
     };
@@ -368,8 +354,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_HeliPilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_HeliPilot",
             "LT_Rifleman",
             "LT_SF_Rifleman"
@@ -381,8 +366,7 @@ class CfgVehicles
         faction = "LT_Group";
         editorSubcategory = "EdSubcat_Helicopters";
         crew = "LT_HeliPilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_HeliPilot",
         };
     };
@@ -391,16 +375,13 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_HeliPilot";
-        hiddenSelections[] =
-	{
+        hiddenSelections[] = {
 	    "camo"
 	};
-	hiddenSelectionsTextures[] = 
-	{ 
+	hiddenSelectionsTextures[] = { 
 	    "LT_Group\Data\ch53_LT_co.paa"
 	};
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_HeliPilot",
             "LT_Rifleman",
             "LT_SF_Rifleman"
@@ -411,8 +392,7 @@ class CfgVehicles
         side = 0;
         faction = "LT_Group";
         crew = "LT_HeliPilot";
-        typicalCargo[] =
-        {
+        typicalCargo[] = {
             "LT_HeliPilot",
             "LT_SF_Rifleman"
         };
@@ -439,5 +419,5 @@ class CfgVehicles
 };
 class cfgMods
 {
-	author="johnyF";
+    author="johnyF";
 };
