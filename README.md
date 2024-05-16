@@ -5,5 +5,5 @@ Files are mostly config based, meaning it inherits from it's dependencies, excep
 <h3>Possibles Updates</h3>
 • Add Anti-Air vehicles/turrets<br/>
 • Custom assets, such as uniforms<br/>
-• Custom Insignia/Logo, so it looks nice in the menus<br/>
+• Make a better looking logo so it can be used as a patch on the uniforms<br/>
 • Fully remove CUP mods from dependencies
