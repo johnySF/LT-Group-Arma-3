@@ -18,6 +18,7 @@ class CfgPatches
 			"V_LT_Van_Cargo",
 			"V_LT_BTR80",
 			"V_LT_T72",
+			"V_LT_Railgun_Tank",
 			"V_LT_MH6",
 			"V_LT_AH6",
 			"V_LT_Gripen",
@@ -42,7 +43,7 @@ class CfgVehicles
 	class C_Van_02_transport_F;
 	class C_Van_02_vehicle_F;
 	class rhsgref_cdf_b_btr80;
-	class rhsgref_ins_t72bc;
+	class rhs_t72bc_tv;
 	class MBT_02_railgun_base_F;
 	class B_Heli_Light_01_F;
 	class B_Heli_Light_01_dynamicLoadout_F;
@@ -408,8 +409,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class V_LT_T72: rhsgref_ins_t72bc
-	{
+	class V_LT_T72: rhs_t72bc_tv
+	{	
 		side=0;
 		faction="LT_Group";
 		editorSubcategory = "EdSubcat_Tanks";
@@ -637,6 +638,7 @@ class CfgVehicles
 	class B_G_HMG_02_F;
 	class B_G_HMG_02_high_F;
 	class RHS_AGS30_TriPod_base;
+	class RHS_ZU23_base;
 
 	class T_LT_M2: B_G_HMG_02_F
 	{
@@ -663,7 +665,19 @@ class CfgVehicles
 			"U_LT_Rifleman"
 		};
 	};
-	
+	class T_LT_ZU23 : RHS_ZU23_base
+	{
+		editorPreview="rhsafrf\addons\rhs_editorPreviews\data\rhs_ZU23_MSV.paa";
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "LT_Group";
+		crew = "U_LT_Rifleman";
+		typicalCargo[] =
+		{
+			"U_LT_Rifleman"
+		};
+	};
 };
 class cfgMods
 {
