@@ -4,5 +4,5 @@ Files are mostly config based, meaning it inherits from it's dependencies, excep
 
 <h3>Possibles Updates</h3>
 • Custom assets, such as uniforms<br/>
-• Fully remove CUP mods from dependencies
+• Fully remove CUP mods from dependencies<br/>
 • Clean up code
