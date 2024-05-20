@@ -1,40 +1,5 @@
-class CfgPatches
-{
-	class LiontoothGroup_Base
-	{
-		weapons[]={};
-		requiredVersion=0.1;
-		requiredAddons[]=
-		{
-			"A3_Characters_F",
-			"A3_Characters_F_Enoch",
-			"A3_Weapons_F",
-			"A3_Soft_F_Orange",
-			"A3_Armor_F_Decade",
-			"A3_Air_F",
-			"A3_Air_F_Gamma",
-			"A3_Air_F_Exp",
-			"A3_Air_F_Jets",
-			"ace_medical_treatment",
-			"ace_grenades",
-			"ace_captives",
-			"ace_compat_rhs_usf3",
-			"ace_compat_rhs_usf3_fastroping",
-			"rhs_c_weapons",
-			"rhs_c_t72",
-			"rhs_c_heavyweapons",
-			"rhsusf_c_troops",
-			"rhsusf_c_weapons",
-			"rhsgref_c_weapons",
-			"rhsgref_c_air",
-			"rhsusf_c_ch53",
-			"rhsgref_c_tohport_air",
-			"CUP_Weapons_NVG",
-			"CUP_Creatures_Military_PMC"
-		};
-		units[]={};
-	};
-};
+#include "CfgPatches.hpp"
+
 class CfgFactionClasses
 {
 	class LT_Group
@@ -275,7 +240,7 @@ class CfgVehicles
 
 	// Infantry Base
 	class O_Soldier_base_F;
-	class U_LT_Base: O_Soldier_base_F
+	class I_LT_Base: O_Soldier_base_F
 	{
 		faction="LT_Group";
 		author="johnyF";
@@ -320,26 +285,24 @@ class CfgVehicles
 			"Head_NATO"
 		};
 	};
-	class U_LT_Infantry_Base: U_LT_Base {
+	class I_LT_Infantry_Base: I_LT_Base {
 		editorSubcategory = "EdSubcat_Personnel";
 		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
 		uniformClass = "U_OG_Guerilla2_3";
 		backpack = "B_LT_AssaultPack";
 		hiddenSelections[] =
 		{
-			"camo",
-			"insignia"
+			"camo"
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla2_3_co.paa",
-			"\LT_Group_Base\Data\LT_Patch.paa"
+			"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla2_3_co.paa"
 		};
 		linkedItems[] =
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -348,8 +311,8 @@ class CfgVehicles
 		respawnLinkedItems[] =
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -396,7 +359,7 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag"
 		};
 	};
-	class U_LT_Hazmat_Base : U_LT_Infantry_Base {
+	class I_LT_Hazmat_Base : I_LT_Infantry_Base {
 		editorSubcategory="LT_E_Chem";
 		model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
 		uniformClass = "U_O_R_Gorka_01_black_F";
@@ -407,7 +370,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -417,7 +380,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -425,7 +388,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_SpecialForces_Base : U_LT_Base {
+	class I_LT_SpecialForces_Base : I_LT_Base {
 		editorSubcategory="EdSubcat_Personnel_SpecialForces";
 		model="\rhsusf\addons\rhsusf_infantry2\CryeGen3.p3d";
 		uniformClass="U_LT_G3";
@@ -487,7 +450,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_B_Ciras_Black2",
-			"CUP_H_OpsCore_Black_SF",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -498,7 +461,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_B_Ciras_Black2",
-			"CUP_H_OpsCore_Black_SF",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -520,7 +483,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="U_LT_Pilot";
+			uniformClass="I_LT_Pilot";
 			containerClass="Supply60";
 			mass=80;
 		};
@@ -531,7 +494,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="U_LT_Sniper";
+			uniformClass="I_LT_Sniper";
 			containerClass="Supply60";
 			mass=80;
 		};
@@ -542,7 +505,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="U_LT_SF_Rifleman";
+			uniformClass="I_LT_SF_Rifleman";
 			containerClass="Supply40";
 			mass=40;
 		};
@@ -551,7 +514,7 @@ class CfgWeapons
 	class SMG_03C_TR_black;
 	class rhs_weap_vhsd2_bg;
 	class rhs_weap_rpk74m_npz;
-	class rhs_weap_vss;
+	class rhs_weap_svdp;
 	class rhs_weap_t5000;
 	class W_LT_VHSD2_Holo: rhs_weap_vhsd2
 	{
@@ -597,7 +560,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class W_LT_VSS: rhs_weap_vss
+	class W_LT_SVD: rhs_weap_svdp
 	{
 		class LinkedItems
 		{
@@ -748,28 +711,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -783,28 +746,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -818,28 +781,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -853,28 +816,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman";
+						vehicle="I_LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Medic";
+						vehicle="I_LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -888,14 +851,14 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
@@ -909,56 +872,56 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman";
+						vehicle="I_LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Medic";
+						vehicle="I_LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_AT";
+						vehicle="I_LT_SF_AT";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Demoman";
+						vehicle="I_LT_SF_Demoman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_SF_Pathfinder";
+						vehicle="I_LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -972,42 +935,42 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman";
+						vehicle="I_LT_SF_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Medic";
+						vehicle="I_LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_SF_Demoman";
+						vehicle="I_LT_SF_Demoman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
@@ -1021,56 +984,56 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -1084,14 +1047,14 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
@@ -1105,14 +1068,14 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Sniper";
+						vehicle="I_LT_Sniper";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
@@ -1126,56 +1089,56 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_GPMG";
+						vehicle="I_LT_GPMG";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_GPMG";
+						vehicle="I_LT_GPMG";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -1189,28 +1152,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Scout";
+						vehicle="I_LT_Scout";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Scout";
+						vehicle="I_LT_Scout";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Engineer";
+						vehicle="I_LT_Engineer";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
@@ -1228,28 +1191,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AA_H";
+						vehicle="I_LT_AA_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_AA_H";
+						vehicle="I_LT_AA_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -1263,28 +1226,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AT_H";
+						vehicle="I_LT_AT_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_AT_H";
+						vehicle="I_LT_AT_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -1298,28 +1261,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman_H";
+						vehicle="I_LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_AT_H";
+						vehicle="I_LT_AT_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
@@ -1333,56 +1296,56 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AT_H";
+						vehicle="I_LT_AT_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Marksman_H";
+						vehicle="I_LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman_H";
+						vehicle="I_LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Medic_H";
+						vehicle="I_LT_Medic_H";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -1396,14 +1359,14 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
@@ -1417,14 +1380,14 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Sniper_H";
+						vehicle="I_LT_Sniper_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Marksman_H";
+						vehicle="I_LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
@@ -1438,56 +1401,56 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL_H";
+						vehicle="I_LT_Rifleman_GL_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_GPMG_H";
+						vehicle="I_LT_GPMG_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_GPMG_H";
+						vehicle="I_LT_GPMG_H";
 						rank="CORPORAL";
 						position[]={2,-2,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Marksman_H";
+						vehicle="I_LT_Marksman_H";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman_H";
+						vehicle="I_LT_Autorifleman_H";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Medic_H";
+						vehicle="I_LT_Medic_H";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -1501,28 +1464,28 @@ class CfgGroups
 					class unit0
 					{
 						side=0;
-						vehicle="U_LT_Scout_H";
+						vehicle="I_LT_Scout_H";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Scout_H";
+						vehicle="I_LT_Scout_H";
 						rank="CORPORAL";
 						position[]={-2,-2,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Engineer_H";
+						vehicle="I_LT_Engineer_H";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_H";
+						vehicle="I_LT_Rifleman_H";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
@@ -1547,21 +1510,21 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
@@ -1582,77 +1545,77 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_GPMG";
+						vehicle="I_LT_GPMG";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={-10,-10,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={-12,-12,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit8
 					{
 						side=0;
-						vehicle="U_LT_Engineer";
+						vehicle="I_LT_Engineer";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
 					class unit9
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={10,-10,0};
 					};
 					class unit10
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={12,-12,0};
 					};
 					class unit11
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={14,-14,0};
 					};
@@ -1673,21 +1636,21 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_GPMG";
+						vehicle="I_LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
@@ -1708,35 +1671,35 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_GPMG";
+						vehicle="I_LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_SF_GPMG";
+						vehicle="I_LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_SF_Pathfinder";
+						vehicle="I_LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
@@ -1757,49 +1720,49 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_Autorifleman";
+						vehicle="I_LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Medic";
+						vehicle="I_LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_SF_GPMG";
+						vehicle="I_LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_SF_Pathfinder";
+						vehicle="I_LT_SF_Pathfinder";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={10,-10,0};
 					};
@@ -1820,49 +1783,49 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_SF_Rifleman_GL";
+						vehicle="I_LT_SF_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_SF_Autorifleman";
+						vehicle="I_LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_SF_Medic";
+						vehicle="I_LT_SF_Medic";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_SF_Marksman";
+						vehicle="I_LT_SF_Marksman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_SF_GPMG";
+						vehicle="I_LT_SF_GPMG";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_SF_Autorifleman";
+						vehicle="I_LT_SF_Autorifleman";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_SF_Scout";
+						vehicle="I_LT_SF_Scout";
 						rank="CORPORAL";
 						position[]={10,-10,0};
 					};
@@ -1887,28 +1850,28 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
@@ -1929,28 +1892,28 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
@@ -1971,77 +1934,77 @@ class CfgGroups
 					class unit1
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-4,-4,0};
 					};
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_GPMG";
+						vehicle="I_LT_GPMG";
 						rank="CORPORAL";
 						position[]={-6,-6,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-8,-8,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={-10,-10,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={-12,-12,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={4,-4,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={6,-6,0};
 					};
 					class unit8
 					{
 						side=0;
-						vehicle="U_LT_Engineer";
+						vehicle="I_LT_Engineer";
 						rank="CORPORAL";
 						position[]={8,-8,0};
 					};
 					class unit9
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={10,-10,0};
 					};
 					class unit10
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={12,-12,0};
 					};
 					class unit11
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={14,-14,0};
 					};
@@ -2101,77 +2064,77 @@ class CfgGroups
 					class unit2
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-10,-14,0};
 					};
 					class unit3
 					{
 						side=0;
-						vehicle="U_LT_GPMG";
+						vehicle="I_LT_GPMG";
 						rank="CORPORAL";
 						position[]={-8,-14,0};
 					};
 					class unit4
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-6,-14,0};
 					};
 					class unit5
 					{
 						side=0;
-						vehicle="U_LT_AA";
+						vehicle="I_LT_AA";
 						rank="CORPORAL";
 						position[]={-4,-14,0};
 					};
 					class unit6
 					{
 						side=0;
-						vehicle="U_LT_Medic";
+						vehicle="I_LT_Medic";
 						rank="CORPORAL";
 						position[]={-10,-16,0};
 					};
 					class unit7
 					{
 						side=0;
-						vehicle="U_LT_Autorifleman";
+						vehicle="I_LT_Autorifleman";
 						rank="CORPORAL";
 						position[]={-8,-16,0};
 					};
 					class unit8
 					{
 						side=0;
-						vehicle="U_LT_Marksman";
+						vehicle="I_LT_Marksman";
 						rank="CORPORAL";
 						position[]={-6,-16,0};
 					};
 					class unit9
 					{
 						side=0;
-						vehicle="U_LT_Engineer";
+						vehicle="I_LT_Engineer";
 						rank="CORPORAL";
 						position[]={-4,-16,0};
 					};
 					class unit10
 					{
 						side=0;
-						vehicle="U_LT_Rifleman_GL";
+						vehicle="I_LT_Rifleman_GL";
 						rank="CORPORAL";
 						position[]={-10,-18,0};
 					};
 					class unit11
 					{
 						side=0;
-						vehicle="U_LT_Rifleman";
+						vehicle="I_LT_Rifleman";
 						rank="CORPORAL";
 						position[]={-8,-18,0};
 					};
 					class unit12
 					{
 						side=0;
-						vehicle="U_LT_AT";
+						vehicle="I_LT_AT";
 						rank="CORPORAL";
 						position[]={-6,-18,0};
 					};

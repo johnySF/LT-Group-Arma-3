@@ -1,39 +1,15 @@
-class CfgPatches
-{
-	class LT_SpecialForces_Units
-	{
-		weapons[]={};
-		requiredVersion=0.1;
-		requiredAddons[]=
-		{
-			"LiontoothGroup_Base"
-		};
-		units[]=
-		{
-			"U_LT_SF_Rifleman",
-			"U_LT_SF_Rifleman_GL",
-			"U_LT_SF_Scout",
-			"U_LT_SF_Medic",
-			"U_LT_SF_Marksman",
-			"U_LT_SF_Pathfinder",
-			"U_LT_SF_Demoman",
-			"U_LT_SF_Autorifleman",
-			"U_LT_SF_GPMG",
-			"U_LT_SF_AT",
-			"U_LT_SF_AA"
-		};
-	};
-};
+#include "CfgPatches.hpp"
+
 class CfgVehicles
 {
-	class U_LT_SpecialForces_Base;
-	class U_LT_SF_Rifleman: U_LT_SpecialForces_Base
+	class I_LT_SpecialForces_Base;
+	class I_LT_SF_Rifleman: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Rifleman";
 		scope=2;
 		scopeCurator=2;
 	};
-	class U_LT_SF_Rifleman_GL: U_LT_SpecialForces_Base
+	class I_LT_SF_Rifleman_GL: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Rifleman (GL)";
 		scope=2;
@@ -99,7 +75,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class U_LT_SF_Scout: U_LT_SpecialForces_Base
+	class I_LT_SF_Scout: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Scout";
 		scope=2;
@@ -167,7 +143,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_SF_Medic: U_LT_SpecialForces_Base
+	class I_LT_SF_Medic: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Medic";
 		scope=2;
@@ -262,7 +238,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_B_Ciras_Black",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -273,7 +249,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_B_Ciras_Black",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -282,7 +258,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_SF_Marksman: U_LT_SpecialForces_Base
+	class I_LT_SF_Marksman: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Marksman";
 		scope=2;
@@ -328,7 +304,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class U_LT_SF_Pathfinder: U_LT_SpecialForces_Base
+	class I_LT_SF_Pathfinder: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Pathfinder";
 		scope=2;
@@ -374,7 +350,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class U_LT_SF_Demoman: U_LT_SpecialForces_Base
+	class I_LT_SF_Demoman: I_LT_SpecialForces_Base
 	{
 		displayName="Demolitions Expert";
 		scope=2;
@@ -423,7 +399,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_IOTV_Black_Gren",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -434,7 +410,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_IOTV_Black_Gren",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"CUP_RUS_Balaclava_blk",
 			"ItemMap",
 			"ItemGPS",
@@ -443,7 +419,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_SF_Autorifleman: U_LT_SpecialForces_Base
+	class I_LT_SF_Autorifleman: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Autorifleman";
 		scope=2;
@@ -478,7 +454,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class U_LT_SF_GPMG: U_LT_SpecialForces_Base
+	class I_LT_SF_GPMG: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Machinegunner";
 		scope=2;
@@ -513,7 +489,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class U_LT_SF_AT: U_LT_SpecialForces_Base
+	class I_LT_SF_AT: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Anti-Tank Specialist";
 		scope=2;
@@ -523,7 +499,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"W_LT_HK416",
-			"rhs_weap_fim92",
+			"rhs_weap_rpg7",
 			"rhsusf_weap_glock17g4",
 			"Throw",
 			"Put"
@@ -531,7 +507,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"W_LT_HK416",
-			"rhs_weap_fim92",
+			"rhs_weap_rpg7",
 			"rhsusf_weap_glock17g4",
 			"Throw",
 			"Put"
@@ -548,7 +524,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"rhs_fim92_mag"
+			"rhs_rpg7_TBG7V_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -562,10 +538,10 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"rhs_fim92_mag"
+			"rhs_rpg7_TBG7V_mag"
 		};
 	};
-	class U_LT_SF_AA: U_LT_SpecialForces_Base
+	class I_LT_SF_AA: I_LT_SpecialForces_Base
 	{
 		displayName="Recon Anti-Air Specialist";
 		scope=2;
@@ -574,7 +550,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"W_LT_HK416",
-			"rhs_weap_smaw",
+			"rhs_weap_fim92",
 			"rhsusf_weap_glock17g4",
 			"Throw",
 			"Put"
@@ -582,7 +558,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"W_LT_HK416",
-			"rhs_weap_smaw",
+			"rhs_weap_fim92",
 			"rhsusf_weap_glock17g4",
 			"Throw",
 			"Put"
@@ -599,7 +575,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"rhs_mag_smaw_HEDP"
+			"rhs_fim92_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -613,7 +589,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"rhs_mag_smaw_HEDP"
+			"rhs_fim92_mag"
 		};
 	};
 };

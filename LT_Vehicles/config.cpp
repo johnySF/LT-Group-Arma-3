@@ -1,39 +1,5 @@
-class CfgPatches
-{
-	class LT_Vehicles
-	{
-		weapons[]={};
-		requiredVersion=0.1;
-		requiredAddons[]=
-		{
-			"LiontoothGroup_Base"
-		};
-		units[]=
-		{
-			"V_LT_UAZ",
-			"V_LT_UAZ_DSHKM",
-			"V_LT_M1025",
-			"V_LT_M1025_M2",
-			"V_LT_Van",
-			"V_LT_Van_Cargo",
-			"V_LT_BTR80",
-			"V_LT_T72",
-			"V_LT_Railgun_Tank",
-			"V_LT_MH6",
-			"V_LT_AH6",
-			"V_LT_Gripen",
-			"V_LT_L159",
-			"V_LT_UH1H",
-			"V_LT_MI24",
-			"V_LT_CH53E",
-			"V_LT_VTOL",
-			"T_LT_M2",
-			"T_LT_M2_High",
-			"T_LT_AGS30",
-			"T_LT_ZU23"
-		};
-	};
-};
+#include "CfgPatches.hpp"
+
 class CfgVehicles
 {
 	class rhsgref_nat_uaz;
@@ -49,6 +15,7 @@ class CfgVehicles
 	class B_Heli_Light_01_dynamicLoadout_F;
 	class I_Plane_Fighter_04_F;
 	class I_Plane_Fighter_03_dynamicLoadout_F;
+	class RHS_C130J_Base;
 	class rhs_uh1h_hidf_gunship;
 	class rhsgref_b_mi24g_CAS;
 	class rhsusf_CH53E_USMC;
@@ -59,13 +26,13 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory="EdSubcat_Cars";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -110,13 +77,13 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory="EdSubcat_Cars";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -161,13 +128,13 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory="EdSubcat_Cars";
-		crew="U_LT_SF_Rifleman";
+		crew="I_LT_SF_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_SF_Rifleman",
-			"U_LT_SF_Scout",
-			"U_LT_SF_Rifleman_GL",
-			"U_LT_SF_Autorifleman"
+			"I_LT_SF_Rifleman",
+			"I_LT_SF_Scout",
+			"I_LT_SF_Rifleman_GL",
+			"I_LT_SF_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -212,13 +179,13 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory="EdSubcat_Cars";
-		crew="U_LT_SF_Rifleman";
+		crew="I_LT_SF_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_SF_Rifleman",
-			"U_LT_SF_Scout",
-			"U_LT_SF_Rifleman_GL",
-			"U_LT_SF_Autorifleman"
+			"I_LT_SF_Rifleman",
+			"I_LT_SF_Scout",
+			"I_LT_SF_Rifleman_GL",
+			"I_LT_SF_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -262,13 +229,13 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -312,13 +279,13 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 		typicalCargo[]=
 		{
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -362,14 +329,14 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Crewman";
+		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
-			"U_LT_Crewman",
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Crewman",
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -414,10 +381,10 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory = "EdSubcat_Tanks";
-		crew="U_LT_Crewman";
+		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
-			"U_LT_Crewman"
+			"I_LT_Crewman"
 		};
 	};
 	class V_LT_Railgun_Tank : MBT_02_railgun_base_F {
@@ -425,12 +392,12 @@ class CfgVehicles
 		scopeCurator = 2;
 		side = 0;
 		faction = "LT_Group";
-		crew="U_LT_Crewman";
+		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
-			"U_LT_Rifleman",
-			"U_LT_Rifleman",
-			"U_LT_Rifleman"
+			"I_LT_Rifleman",
+			"I_LT_Rifleman",
+			"I_LT_Rifleman"
 		};
 		hiddenSelections[]=
 		{
@@ -451,14 +418,14 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Crewman";
+		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
-			"U_LT_Crewman",
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_Crewman",
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -502,14 +469,14 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_HeliPilot";
+		crew="I_LT_HeliPilot";
 		typicalCargo[]=
 		{
-			"U_LT_HeliPilot",
-			"U_LT_Rifleman",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman"
+			"I_LT_HeliPilot",
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
 		};
 		class TransportBackpacks
 		{
@@ -554,10 +521,10 @@ class CfgVehicles
 		side=0;
 		displayName="Gripen (Liontooth)";
 		faction="LT_Group";
-		crew="U_LT_Pilot";
+		crew="I_LT_Pilot";
 		typicalCargo[]=
 		{
-			"U_LT_Pilot"
+			"I_LT_Pilot"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -573,22 +540,43 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Pilot";
+		crew="I_LT_Pilot";
 		typicalCargo[]=
 		{
-			"U_LT_Pilot"
+			"I_LT_Pilot"
+		};
+	};
+	class V_LT_C130J: RHS_C130J_Base 
+	{
+		side=0;
+		faction="LT_Group";
+		crew="I_LT_Pilot";
+		typicalCargo[] =
+		{
+			"I_LT_Pilot",
+			"I_LT_Pilot"
+		};
+		hiddenSelections[] =
+		{
+			"camo1"		// Body
+			// "camo2"	// Wings
+		};
+		hiddenSelectionTextures[] = 
+		{
+			"LT_Vehicles\Data\C130_LT_Body_co.paa"
+			// "LT_Vehicles\Data\C130_LT_Wings_co.paa"
 		};
 	};
 	class V_LT_UH1H: rhs_uh1h_hidf_gunship
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_HeliPilot";
+		crew="I_LT_HeliPilot";
 		typicalCargo[]=
 		{
-			"U_LT_HeliPilot",
-			"U_LT_Rifleman",
-			"U_LT_SF_Rifleman"
+			"I_LT_HeliPilot",
+			"I_LT_Rifleman",
+			"I_LT_SF_Rifleman"
 		};
 	};
 	class V_LT_MI24: rhsgref_b_mi24g_CAS
@@ -596,17 +584,17 @@ class CfgVehicles
 		side=0;
 		faction="LT_Group";
 		editorSubcategory="EdSubcat_Helicopters";
-		crew="U_LT_HeliPilot";
+		crew="I_LT_HeliPilot";
 		typicalCargo[]=
 		{
-			"U_LT_HeliPilot"
+			"I_LT_HeliPilot"
 		};
 	};
 	class V_LT_CH53E: rhsusf_CH53E_USMC
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_HeliPilot";
+		crew="I_LT_HeliPilot";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -617,20 +605,20 @@ class CfgVehicles
 		};
 		typicalCargo[]=
 		{
-			"U_LT_HeliPilot",
-			"U_LT_Rifleman",
-			"U_LT_SF_Rifleman"
+			"I_LT_HeliPilot",
+			"I_LT_Rifleman",
+			"I_LT_SF_Rifleman"
 		};
 	};
 	class V_LT_VTOL: B_T_VTOL_01_infantry_F
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_HeliPilot";
+		crew="I_LT_HeliPilot";
 		typicalCargo[]=
 		{
-			"U_LT_HeliPilot",
-			"U_LT_SF_Rifleman"
+			"I_LT_HeliPilot",
+			"I_LT_SF_Rifleman"
 		};
 	};
 
@@ -644,13 +632,13 @@ class CfgVehicles
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 	};
 	class T_LT_M2_High: B_G_HMG_02_high_F
 	{
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 	};
 	class T_LT_AGS30: RHS_AGS30_TriPod_base
 	{
@@ -659,10 +647,10 @@ class CfgVehicles
 		scopeCurator = 2;
 		side=0;
 		faction="LT_Group";
-		crew="U_LT_Rifleman";
+		crew="I_LT_Rifleman";
 		typicalCargo[] =
 		{
-			"U_LT_Rifleman"
+			"I_LT_Rifleman"
 		};
 	};
 	class T_LT_ZU23 : RHS_ZU23_base
@@ -672,10 +660,10 @@ class CfgVehicles
 		scopeCurator = 2;
 		side = 0;
 		faction = "LT_Group";
-		crew = "U_LT_Rifleman";
+		crew = "I_LT_Rifleman";
 		typicalCargo[] =
 		{
-			"U_LT_Rifleman"
+			"I_LT_Rifleman"
 		};
 	};
 };

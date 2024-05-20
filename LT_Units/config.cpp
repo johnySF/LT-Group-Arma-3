@@ -1,56 +1,17 @@
-class CfgPatches
-{
-	class LT_Units
-	{
-		weapons[] = {};
-		requiredVersion=0.1;
-		requiredAddons[] =
-		{
-			"LiontoothGroup_Base"
-		};
-		units[] =
-		{
-			"U_LT_Rifleman",
-			"U_LT_Officer",
-			"U_LT_Scout",
-			"U_LT_Rifleman_GL",
-			"U_LT_Autorifleman",
-			"U_LT_GPMG",
-			"U_LT_AT",
-			"U_LT_AA",
-			"U_LT_Medic",
-			"U_LT_Engineer",
-			"U_LT_Marksman",
-			"U_LT_Sniper",
-			"U_LT_Crewman",
-			"U_LT_Pilot",
-			"U_LT_HeliPilot",
-			"U_LT_Rifleman_H",
-			"U_LT_Scout_H",
-			"U_LT_Rifleman_GL_H",
-			"U_LT_Autorifleman_H",
-			"U_LT_GPMG_H",
-			"U_LT_AT_H",
-			"U_LT_AA_H",
-			"U_LT_Medic_H",
-			"U_LT_Engineer_H",
-			"U_LT_Marksman_H",
-			"U_LT_Sniper_H"
-		};
-	};
-};
+#include "CfgPatches.hpp"
+
 class CfgVehicles
 {
 	// Regular Infantry
-	class U_LT_Base;
-	class U_LT_Infantry_Base;
-	class U_LT_Rifleman : U_LT_Infantry_Base
+	class I_LT_Base;
+	class I_LT_Infantry_Base;
+	class I_LT_Rifleman : I_LT_Infantry_Base
 	{
 		displayName = "Rifleman";
 		scope = 2;
 		scopeCurator = 2;
 	};
-	class U_LT_Officer : U_LT_Infantry_Base
+	class I_LT_Officer : I_LT_Infantry_Base
 	{
 		displayName = "Officer";
 		scope = 2;
@@ -74,7 +35,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Scout: U_LT_Infantry_Base
+	class I_LT_Scout: I_LT_Infantry_Base
 	{
 		displayName="Scout";
 		scope = 2;
@@ -146,7 +107,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Rifleman_GL: U_LT_Infantry_Base
+	class I_LT_Rifleman_GL: I_LT_Infantry_Base
 	{
 		displayName="Grenadier";
 		scope = 2;
@@ -214,8 +175,8 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -224,15 +185,15 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio"
 		};
 	};
-	class U_LT_Autorifleman: U_LT_Infantry_Base
+	class I_LT_Autorifleman: I_LT_Infantry_Base
 	{
 		displayName="Autorifleman";
 		scope = 2;
@@ -269,8 +230,8 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -279,15 +240,15 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio"
 		};
 	};
-	class U_LT_GPMG: U_LT_Autorifleman
+	class I_LT_GPMG: I_LT_Autorifleman
 	{
 		displayName="Machinegunner";
 		scope = 2;
@@ -328,7 +289,7 @@ class CfgVehicles
 			"SmokeShell"
 		};
 	};
-	class U_LT_AT: U_LT_Infantry_Base
+	class I_LT_AT: I_LT_Infantry_Base
 	{
 		displayName="Anti-Tank Specialist";
 		scope = 2;
@@ -338,7 +299,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"W_LT_VHSD2_Holo",
-			"rhs_weap_smaw",
+			"rhs_weap_rpg7",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
@@ -346,7 +307,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"W_LT_VHSD2_Holo",
-			"rhs_weap_smaw",
+			"rhs_weap_rpg7",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
@@ -363,7 +324,7 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
-			"rhs_mag_smaw_HEDP"
+			"rhs_rpg7_TBG7V_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -377,10 +338,10 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
-			"rhs_mag_smaw_HEDP"
+			"rhs_rpg7_TBG7V_mag"
 		};
 	};
-	class U_LT_AA: U_LT_Infantry_Base
+	class I_LT_AA: I_LT_Infantry_Base
 	{
 		displayName="Anti-Air Specialist";
 		scope = 2;
@@ -431,7 +392,7 @@ class CfgVehicles
 			"rhs_fim92_mag"
 		};
 	};
-	class U_LT_Medic: U_LT_Infantry_Base
+	class I_LT_Medic: I_LT_Infantry_Base
 	{
 		displayName="Medic";
 		scope = 2;
@@ -526,8 +487,8 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"V_TacVestIR_blk",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -536,15 +497,15 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"V_TacVestIR_blk",
-			"CUP_H_OpsCore_Black",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_opscore_bk_pelt",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio"
 		};
 	};
-	class U_LT_Engineer: U_LT_Infantry_Base
+	class I_LT_Engineer: I_LT_Infantry_Base
 	{
 		displayName="Engineer";
 		scope = 2;
@@ -629,53 +590,53 @@ class CfgVehicles
 			"MineDetector"
 		};
 	};
-	class U_LT_Marksman: U_LT_Infantry_Base
+	class I_LT_Marksman: I_LT_Infantry_Base
 	{
 		displayName="Marksman";
 		scope = 2;
 		scopeCurator = 2;
 		weapons[]=
 		{
-			"W_LT_VSS",
+			"W_LT_SVD",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"W_LT_VSS",
+			"W_LT_SVD",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
 		magazines[]=
 		{
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag"
 		};
 		respawnMagazines[]=
 		{
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
-			"rhs_20rnd_9x39mm_SP6",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
+			"rhs_10Rnd_762x54mmR_7N14",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag"
 		};
 	};
-	class U_LT_Sniper: U_LT_Base
+	class I_LT_Sniper: I_LT_Base
 	{
 		displayName="Sniper";
 		scope = 2;
@@ -756,7 +717,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Crewman: U_LT_Infantry_Base
+	class I_LT_Crewman: I_LT_Infantry_Base
 	{
 		displayName="Crewman";
 		scope = 2;
@@ -766,8 +727,8 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Veh",
-			"CUP_H_CZ_Helmet05",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_cvc_green_helmet",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -776,15 +737,55 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Veh",
-			"CUP_H_CZ_Helmet05",
-			"CUP_G_ESS_BLK_Dark",
+			"rhsusf_cvc_green_helmet",
+			"rhsusf_oakley_goggles_clr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio"
 		};
+		weapons[] =
+		{
+			"rhs_weap_pp2000",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[] =
+		{
+			"rhs_weap_pp2000",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		magazines[] =
+		{
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
+		respawnMagazines[] =
+		{
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"rhs_mag_9x19mm_7n21_20",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
 	};
-	class U_LT_Pilot: U_LT_Base
+	class I_LT_Pilot: I_LT_Base
 	{
 		displayName="Pilot";
 		scope = 2;
@@ -840,7 +841,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_HeliPilot: U_LT_Crewman
+	class I_LT_HeliPilot: I_LT_Crewman
 	{
 		displayName="Helicopter Pilot";
 		scope = 2;
@@ -868,14 +869,14 @@ class CfgVehicles
 	};
 
 	// HAZMAT
-	class U_LT_Hazmat_Base;
-	class U_LT_Rifleman_H : U_LT_Hazmat_Base
+	class I_LT_Hazmat_Base;
+	class I_LT_Rifleman_H : I_LT_Hazmat_Base
 	{
 		displayName="Rifleman (HAZMAT)";
 		scope = 2;
 		scopeCurator = 2;
 	};
-	class U_LT_Scout_H: U_LT_Scout
+	class I_LT_Scout_H: I_LT_Scout
 	{
 		displayName="Scout (HAZMAT)";
 		scope = 2;
@@ -908,7 +909,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Rifleman_GL_H: U_LT_Rifleman_GL
+	class I_LT_Rifleman_GL_H: I_LT_Rifleman_GL
 	{
 		displayName="Grenadier (HAZMAT)";
 		scope = 2;
@@ -923,7 +924,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -933,7 +934,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -941,7 +942,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Autorifleman_H: U_LT_Autorifleman
+	class I_LT_Autorifleman_H: I_LT_Autorifleman
 	{
 		displayName="Autorifleman (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
@@ -954,7 +955,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -964,7 +965,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -972,7 +973,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_GPMG_H: U_LT_GPMG
+	class I_LT_GPMG_H: I_LT_GPMG
 	{
 		displayName="Machinegunner (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
@@ -985,7 +986,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -995,7 +996,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Empty",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1003,7 +1004,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_AT_H: U_LT_Hazmat_Base
+	class I_LT_AT_H: I_LT_Hazmat_Base
 	{
 		displayName="Anti-Tank Specialist (HAZMAT)";
 		scope = 2;
@@ -1012,16 +1013,16 @@ class CfgVehicles
 		weapons[]=
 		{
 			"W_LT_VHSD2_Holo",
+			"rhs_weap_rpg7",
 			"hgun_ACPC2_F",
-			"rhs_weap_smaw",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
 			"W_LT_VHSD2_Holo",
+			"rhs_weap_rpg7",
 			"hgun_ACPC2_F",
-			"rhs_weap_smaw",
 			"Throw",
 			"Put"
 		};
@@ -1037,7 +1038,7 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
-			"rhs_mag_smaw_HEDP"
+			"rhs_rpg7_TBG7V_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -1051,10 +1052,10 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
-			"rhs_mag_smaw_HEDP"
+			"rhs_rpg7_TBG7V_mag"
 		};
 	};
-	class U_LT_AA_H: U_LT_Hazmat_Base
+	class I_LT_AA_H: I_LT_Hazmat_Base
 	{
 		displayName="Anti-Air Specialist (HAZMAT)";
 		scope = 2;
@@ -1076,7 +1077,7 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class U_LT_Medic_H: U_LT_Medic
+	class I_LT_Medic_H: I_LT_Medic
 	{
 		displayName="Medic (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
@@ -1089,7 +1090,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"V_TacVestIR_blk",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1099,7 +1100,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"V_TacVestIR_blk",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1107,7 +1108,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Engineer_H: U_LT_Engineer
+	class I_LT_Engineer_H: I_LT_Engineer
 	{
 		displayName="Engineer (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
@@ -1120,7 +1121,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1130,7 +1131,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1138,7 +1139,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Marksman_H: U_LT_Marksman
+	class I_LT_Marksman_H: I_LT_Marksman
 	{
 		displayName="Marksman (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
@@ -1151,7 +1152,7 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1161,7 +1162,7 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_OpsCore_Black",
+			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
 			"ItemMap",
 			"ItemCompass",
@@ -1169,7 +1170,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class U_LT_Sniper_H: U_LT_Sniper
+	class I_LT_Sniper_H: I_LT_Sniper
 	{
 		displayName="Sniper (HAZMAT)";
 		editorSubcategory="LT_E_Chem";
