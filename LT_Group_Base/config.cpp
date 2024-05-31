@@ -22,7 +22,6 @@ class CfgEditorSubcategories
 };
 class CfgVehicles
 {
-	// Backpacks
 	class B_AssaultPack_blk;
 	class B_Carryall_blk;
 	class B_LegStrapBag_black_F;
@@ -213,9 +212,9 @@ class CfgVehicles
 	{
 		class TransportMagazines
 		{
-			class _xx_rhs_mag_smaw_HEDP
+			class _xx_rhs_rpg7_TBG7V_mag
 			{
-				magazine="rhs_mag_smaw_HEDP";
+				magazine="rhs_rpg7_TBG7V_mag";
 				count=1;
 			};
 			class _xx_SmokeShell
@@ -237,20 +236,17 @@ class CfgVehicles
 			};
 		};
 	};
-
-	// Infantry Base
 	class O_Soldier_base_F;
 	class I_LT_Base: O_Soldier_base_F
 	{
 		faction="LT_Group";
 		author="johnyF";
-		scope = 0;
-		scopeCurator = 0;
-		cost = 200000;
-		camouflage = 1.5;
-		sensitivity = 2.5;
-		threat[] = {1,0.5,0.5};
-		
+		scope=0;
+		scopeCurator=0;
+		cost=200000;
+		camouflage=1.5;
+		sensitivity=2.5;
+		threat[]={1,0.5,0.5};
 		items[]=
 		{
 			"ACE_elasticBandage",
@@ -285,20 +281,21 @@ class CfgVehicles
 			"Head_NATO"
 		};
 	};
-	class I_LT_Infantry_Base: I_LT_Base {
-		editorSubcategory = "EdSubcat_Personnel";
-		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
-		uniformClass = "U_OG_Guerilla2_3";
-		backpack = "B_LT_AssaultPack";
-		hiddenSelections[] =
+	class I_LT_Infantry_Base: I_LT_Base
+	{
+		editorSubcategory="EdSubcat_Personnel";
+		model="\A3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";
+		uniformClass="U_OG_Guerilla2_3";
+		backpack="B_LT_AssaultPack";
+		hiddenSelections[]=
 		{
 			"camo"
 		};
-		hiddenSelectionsTextures[] =
+		hiddenSelectionsTextures[]=
 		{
 			"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla2_3_co.paa"
 		};
-		linkedItems[] =
+		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
@@ -308,7 +305,7 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemRadio"
 		};
-		respawnLinkedItems[] =
+		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
@@ -318,21 +315,21 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemRadio"
 		};
-		weapons[] =
+		weapons[]=
 		{
 			"W_LT_VHSD2_Holo",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
-		respawnWeapons[] =
+		respawnWeapons[]=
 		{
 			"W_LT_VHSD2_Holo",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
-		magazines[] =
+		magazines[]=
 		{
 			"rhsgref_30rnd_556x45_vhs2_t",
 			"rhsgref_30rnd_556x45_vhs2_t",
@@ -345,7 +342,7 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag"
 		};
-		respawnMagazines[] =
+		respawnMagazines[]=
 		{
 			"rhsgref_30rnd_556x45_vhs2_t",
 			"rhsgref_30rnd_556x45_vhs2_t",
@@ -359,10 +356,11 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag"
 		};
 	};
-	class I_LT_Hazmat_Base : I_LT_Infantry_Base {
+	class I_LT_Hazmat_Base: I_LT_Infantry_Base
+	{
 		editorSubcategory="LT_E_Chem";
-		model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass = "U_O_R_Gorka_01_black_F";
+		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
+		uniformClass="U_O_R_Gorka_01_black_F";
 		hiddenSelectionsTextures[]=
 		{
 			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
@@ -388,7 +386,8 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_SpecialForces_Base : I_LT_Base {
+	class I_LT_SpecialForces_Base: I_LT_Base
+	{
 		editorSubcategory="EdSubcat_Personnel_SpecialForces";
 		model="\rhsusf\addons\rhsusf_infantry2\CryeGen3.p3d";
 		uniformClass="U_LT_G3";

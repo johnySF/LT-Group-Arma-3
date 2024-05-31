@@ -1,11 +1,15 @@
-class CfgPatches {
-	class LiontoothGroup_Base {
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {
+class CfgPatches
+{
+	class LiontoothGroup_Base
+	{
+		weapons[]={};
+		requiredVersion=0.1;
+		requiredAddons[]=
+		{
 			"A3_Characters_F",
 			"A3_Characters_F_Enoch",
 			"A3_Weapons_F",
+			"A3_Weapons_F_Exp",
 			"A3_Soft_F_Orange",
 			"A3_Armor_F_Decade",
 			"A3_Air_F",
@@ -28,12 +32,14 @@ class CfgPatches {
 			"rhsgref_c_air",
 			"rhsusf_c_ch53",
 			"rhsgref_c_tohport_air",
+			"CUP_Weapons_AA12",
+			"CUP_Weapons_Ammunition",
 			"CUP_Weapons_NVG",
 			"CUP_Creatures_Military_PMC",
 			"CUP_Creatures_Military_Russia",
 			"CUP_Creatures_Military_USArmy",
 			"CUP_Creatures_Military_PMC"
 		};
-		units[] = {};
+		units[]={};
 	};
 };

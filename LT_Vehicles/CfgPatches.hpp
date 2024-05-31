@@ -1,11 +1,15 @@
-class CfgPatches {
-	class LT_Vehicles {
-		weapons[] = {};
+class CfgPatches
+{
+	class LT_Vehicles
+	{
+		weapons[]={};
 		requiredVersion=0.1;
-		requiredAddons[] = {
+		requiredAddons[]=
+		{
 			"LiontoothGroup_Base"
 		};
-		units[] = {
+		units[]=
+		{
 			"V_LT_UAZ",
 			"V_LT_UAZ_DSHKM",
 			"V_LT_M1025",
@@ -19,7 +23,7 @@ class CfgPatches {
 			"V_LT_AH6",
 			"V_LT_Gripen",
 			"V_LT_L159",
-			// "V_LT_C130J",
+			"V_LT_C130J",
 			"V_LT_UH1H",
 			"V_LT_MI24",
 			"V_LT_CH53E",
@@ -27,7 +31,8 @@ class CfgPatches {
 			"T_LT_M2",
 			"T_LT_M2_High",
 			"T_LT_AGS30",
-			"T_LT_ZU23"
+			"T_LT_ZU23",
+			"T_LT_Mortar"
 		};
 	};
 };

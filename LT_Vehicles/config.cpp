@@ -2,6 +2,7 @@
 
 class CfgVehicles
 {
+	// Ground
 	class rhsgref_nat_uaz;
 	class rhsgref_nat_uaz_dshkm;
 	class rhsgref_hidf_m1025;
@@ -11,16 +12,6 @@ class CfgVehicles
 	class rhsgref_cdf_b_btr80;
 	class rhs_t72bc_tv;
 	class MBT_02_railgun_base_F;
-	class B_Heli_Light_01_F;
-	class B_Heli_Light_01_dynamicLoadout_F;
-	class I_Plane_Fighter_04_F;
-	class I_Plane_Fighter_03_dynamicLoadout_F;
-	class RHS_C130J_Base;
-	class rhs_uh1h_hidf_gunship;
-	class rhsgref_b_mi24g_CAS;
-	class rhsusf_CH53E_USMC;
-	class B_T_VTOL_01_infantry_F;
-
 	class V_LT_UAZ: rhsgref_nat_uaz
 	{
 		side=0;
@@ -377,21 +368,22 @@ class CfgVehicles
 		};
 	};
 	class V_LT_T72: rhs_t72bc_tv
-	{	
+	{
 		side=0;
 		faction="LT_Group";
-		editorSubcategory = "EdSubcat_Tanks";
+		editorSubcategory="EdSubcat_Tanks";
 		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
 			"I_LT_Crewman"
 		};
 	};
-	class V_LT_Railgun_Tank : MBT_02_railgun_base_F {
-		scope = 2;
-		scopeCurator = 2;
-		side = 0;
-		faction = "LT_Group";
+	class V_LT_Railgun_Tank: MBT_02_railgun_base_F
+	{
+		scope=2;
+		scopeCurator=2;
+		side=0;
+		faction="LT_Group";
 		crew="I_LT_Crewman";
 		typicalCargo[]=
 		{
@@ -414,6 +406,18 @@ class CfgVehicles
 			"A3\Armor_F\Data\camonet_CSAT_HEX_Green_CO.paa"
 		};
 	};
+
+	// Air
+	class B_Heli_Light_01_F;
+	class B_Heli_Light_01_dynamicLoadout_F;
+	class I_Plane_Fighter_04_F;
+	class I_Plane_Fighter_03_dynamicLoadout_F;
+	class RHS_C130J_Base;
+	class rhs_uh1h_hidf_gunship;
+	class rhsgref_b_mi24g_CAS;
+	class rhsusf_CH53E_USMC;
+	class B_T_VTOL_01_infantry_F;
+
 	class V_LT_MH6: B_Heli_Light_01_F
 	{
 		side=0;
@@ -546,25 +550,50 @@ class CfgVehicles
 			"I_LT_Pilot"
 		};
 	};
-	class V_LT_C130J: RHS_C130J_Base 
+	class V_LT_C130J: RHS_C130J_Base
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side=0;
 		faction="LT_Group";
 		crew="I_LT_Pilot";
-		typicalCargo[] =
+		typicalCargo[]=
 		{
 			"I_LT_Pilot",
 			"I_LT_Pilot"
 		};
-		hiddenSelections[] =
+		hiddenSelections[]=
 		{
-			"camo1"		// Body
-			// "camo2"	// Wings
+			"camo1",
+			"camo2"
 		};
-		hiddenSelectionTextures[] = 
+		hiddenSelectionTextures[]=
 		{
-			"LT_Vehicles\Data\C130_LT_Body_co.paa"
-			// "LT_Vehicles\Data\C130_LT_Wings_co.paa"
+			"LT_Vehicles\Data\C130_LT_Body_co.paa",
+			"rhsusf\addons\rhsusf_a2port_air\c130j\data\c130j_wings_co.paa"
+		};
+		
+		class textureSources
+		{
+			class LT_Livery
+			{
+				displayName="Liontooth Livery";
+				author="johnyF";
+				textures[]=
+				{
+					"LT_Vehicles\Data\C130_LT_Body_co.paa",
+					"rhsusf\addons\rhsusf_a2port_air\c130j\data\c130j_wings_co.paa"
+				};
+				factions[]=
+				{
+					"LT_Group"
+				};
+			};
+		};
+		textureList[]=
+		{
+			"LT_Livery",
+			1
 		};
 	};
 	class V_LT_UH1H: rhs_uh1h_hidf_gunship
@@ -621,12 +650,13 @@ class CfgVehicles
 			"I_LT_SF_Rifleman"
 		};
 	};
-
+	
 	// Turrets
 	class B_G_HMG_02_F;
 	class B_G_HMG_02_high_F;
 	class RHS_AGS30_TriPod_base;
 	class RHS_ZU23_base;
+	class B_Mortar_01_F;
 
 	class T_LT_M2: B_G_HMG_02_F
 	{
@@ -643,28 +673,33 @@ class CfgVehicles
 	class T_LT_AGS30: RHS_AGS30_TriPod_base
 	{
 		editorPreview="rhsafrf\addons\rhs_editorPreviews\data\rhs_AGS30_TriPod_VMF.paa";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		side=0;
 		faction="LT_Group";
 		crew="I_LT_Rifleman";
-		typicalCargo[] =
+		typicalCargo[]=
 		{
 			"I_LT_Rifleman"
 		};
 	};
-	class T_LT_ZU23 : RHS_ZU23_base
+	class T_LT_ZU23: RHS_ZU23_base
 	{
 		editorPreview="rhsafrf\addons\rhs_editorPreviews\data\rhs_ZU23_MSV.paa";
-		scope = 2;
-		scopeCurator = 2;
-		side = 0;
-		faction = "LT_Group";
-		crew = "I_LT_Rifleman";
-		typicalCargo[] =
+		scope=2;
+		scopeCurator=2;
+		side=0;
+		faction="LT_Group";
+		crew="I_LT_Rifleman";
+		typicalCargo[]=
 		{
 			"I_LT_Rifleman"
 		};
+	};
+	class T_LT_Mortar : B_Mortar_01_F{
+		side=0;
+		faction="LT_Group";
+		crew="I_LT_Rifleman";
 	};
 };
 class cfgMods

@@ -1,11 +1,15 @@
-class CfgPatches {
-	class LT_SpecialForces_Units {
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {
+class CfgPatches
+{
+	class LT_SpecialForces_Units
+	{
+		weapons[]={};
+		requiredVersion=0.1;
+		requiredAddons[]=
+		{
 			"LiontoothGroup_Base"
 		};
-		units[] = {
+		units[]=
+		{
 			"I_LT_SF_Rifleman",
 			"I_LT_SF_Rifleman_GL",
 			"I_LT_SF_Scout",
@@ -16,7 +20,8 @@ class CfgPatches {
 			"I_LT_SF_Autorifleman",
 			"I_LT_SF_GPMG",
 			"I_LT_SF_AT",
-			"I_LT_SF_AA"
+			"I_LT_SF_AA",
+			"I_LT_SF_Shotgunner"
 		};
 	};
 };

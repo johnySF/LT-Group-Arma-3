@@ -2,21 +2,54 @@
 
 class CfgVehicles
 {
-	// Regular Infantry
 	class I_LT_Base;
 	class I_LT_Infantry_Base;
-	class I_LT_Rifleman : I_LT_Infantry_Base
+	class I_LT_Rifleman: I_LT_Infantry_Base
 	{
-		displayName = "Rifleman";
-		scope = 2;
-		scopeCurator = 2;
+		displayName="Rifleman";
+		scope=2;
+		scopeCurator=2;
 	};
-	class I_LT_Officer : I_LT_Infantry_Base
+	class I_LT_Officer: I_LT_Infantry_Base
 	{
-		displayName = "Officer";
-		scope = 2;
-		scopeCurator = 2;
-		linkedItems[] =
+		displayName="Officer";
+		scope=2;
+		scopeCurator=2;
+		weapons[] = {
+			"SMG_05_F",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[] = {
+			"SMG_05_F",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		magazines[] = {
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
+		respawnMagazines[] = {
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
+		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"CUP_H_SLA_BeretRed",
@@ -25,7 +58,7 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemRadio"
 		};
-		respawnLinkedItems[] =
+		respawnLinkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"CUP_H_SLA_BeretRed",
@@ -38,8 +71,8 @@ class CfgVehicles
 	class I_LT_Scout: I_LT_Infantry_Base
 	{
 		displayName="Scout";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		weapons[]=
 		{
 			"W_LT_P90_Reflex",
@@ -110,8 +143,8 @@ class CfgVehicles
 	class I_LT_Rifleman_GL: I_LT_Infantry_Base
 	{
 		displayName="Grenadier";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		weapons[]=
 		{
 			"W_LT_VHSD2_GL",
@@ -196,8 +229,8 @@ class CfgVehicles
 	class I_LT_Autorifleman: I_LT_Infantry_Base
 	{
 		displayName="Autorifleman";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		backpack="B_LT_Carryall_Auto";
 		weapons[]=
 		{
@@ -251,8 +284,8 @@ class CfgVehicles
 	class I_LT_GPMG: I_LT_Autorifleman
 	{
 		displayName="Machinegunner";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		backpack="B_LT_Carryall_GPMG";
 		weapons[]=
 		{
@@ -292,8 +325,8 @@ class CfgVehicles
 	class I_LT_AT: I_LT_Infantry_Base
 	{
 		displayName="Anti-Tank Specialist";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		icon="iconManAT";
 		backpack="B_LT_Carryall_AT";
 		weapons[]=
@@ -344,8 +377,8 @@ class CfgVehicles
 	class I_LT_AA: I_LT_Infantry_Base
 	{
 		displayName="Anti-Air Specialist";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		icon="iconManAT";
 		weapons[]=
 		{
@@ -395,8 +428,8 @@ class CfgVehicles
 	class I_LT_Medic: I_LT_Infantry_Base
 	{
 		displayName="Medic";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		icon="iconManMedic";
 		attendant=1;
 		backpack="B_LT_MedicalPack";
@@ -508,8 +541,8 @@ class CfgVehicles
 	class I_LT_Engineer: I_LT_Infantry_Base
 	{
 		displayName="Engineer";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		icon="iconManEngineer";
 		engineer=1;
 		canDeactivateMines=1;
@@ -593,8 +626,8 @@ class CfgVehicles
 	class I_LT_Marksman: I_LT_Infantry_Base
 	{
 		displayName="Marksman";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		weapons[]=
 		{
 			"W_LT_SVD",
@@ -639,11 +672,11 @@ class CfgVehicles
 	class I_LT_Sniper: I_LT_Base
 	{
 		displayName="Sniper";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		model="\A3\Characters_F_Mark\INDEP\i_fullghillie_f.p3d";
 		uniformClass="U_LT_Ghillie";
-		backpack = "B_LT_AssaultPack";
+		backpack="B_LT_AssaultPack";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -720,8 +753,8 @@ class CfgVehicles
 	class I_LT_Crewman: I_LT_Infantry_Base
 	{
 		displayName="Crewman";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		backpack="B_LT_Legstrap";
 		engineer=1;
 		linkedItems[]=
@@ -744,21 +777,21 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemRadio"
 		};
-		weapons[] =
+		weapons[]=
 		{
 			"rhs_weap_pp2000",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
-		respawnWeapons[] =
+		respawnWeapons[]=
 		{
 			"rhs_weap_pp2000",
 			"hgun_ACPC2_F",
 			"Throw",
 			"Put"
 		};
-		magazines[] =
+		magazines[]=
 		{
 			"rhs_mag_9x19mm_7n21_20",
 			"rhs_mag_9x19mm_7n21_20",
@@ -771,7 +804,7 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag"
 		};
-		respawnMagazines[] =
+		respawnMagazines[]=
 		{
 			"rhs_mag_9x19mm_7n21_20",
 			"rhs_mag_9x19mm_7n21_20",
@@ -788,8 +821,8 @@ class CfgVehicles
 	class I_LT_Pilot: I_LT_Base
 	{
 		displayName="Pilot";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		model="\A3\characters_F\Common\pilot_f.p3d";
 		uniformClass="U_LT_Pilot";
 		hiddenSelectionsTextures[]=
@@ -844,8 +877,8 @@ class CfgVehicles
 	class I_LT_HeliPilot: I_LT_Crewman
 	{
 		displayName="Helicopter Pilot";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		linkedItems[]=
 		{
 			"CUP_V_PMC_CIRAS_Black_Veh",
@@ -867,20 +900,18 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-
-	// HAZMAT
 	class I_LT_Hazmat_Base;
-	class I_LT_Rifleman_H : I_LT_Hazmat_Base
+	class I_LT_Rifleman_H: I_LT_Hazmat_Base
 	{
 		displayName="Rifleman (HAZMAT)";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 	};
 	class I_LT_Scout_H: I_LT_Scout
 	{
 		displayName="Scout (HAZMAT)";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		editorSubcategory="LT_E_Chem";
 		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
 		uniformClass="U_O_R_Gorka_01_black_F";
@@ -912,8 +943,8 @@ class CfgVehicles
 	class I_LT_Rifleman_GL_H: I_LT_Rifleman_GL
 	{
 		displayName="Grenadier (HAZMAT)";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		editorSubcategory="LT_E_Chem";
 		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
 		uniformClass="U_O_R_Gorka_01_black_F";
@@ -1007,8 +1038,8 @@ class CfgVehicles
 	class I_LT_AT_H: I_LT_Hazmat_Base
 	{
 		displayName="Anti-Tank Specialist (HAZMAT)";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		backpack="B_LT_Carryall_AT";
 		weapons[]=
 		{
@@ -1058,8 +1089,8 @@ class CfgVehicles
 	class I_LT_AA_H: I_LT_Hazmat_Base
 	{
 		displayName="Anti-Air Specialist (HAZMAT)";
-		scope = 2;
-		scopeCurator = 2;
+		scope=2;
+		scopeCurator=2;
 		weapons[]=
 		{
 			"W_LT_VHSD2_Holo",

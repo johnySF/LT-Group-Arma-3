@@ -592,6 +592,49 @@ class CfgVehicles
 			"rhs_fim92_mag"
 		};
 	};
+	class I_LT_SF_Shotgunner: I_LT_SpecialForces_Base {
+		displayName = "Recon Shotgunner";
+		scope=2;
+		scopeCurator=2;
+		weapons[]=
+		{
+			"CUP_sgun_AA12",
+			"rhsusf_weap_glock17g4",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"CUP_sgun_AA12",
+			"rhsusf_weap_glock17g4",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ"
+		};
+		respawnMagazines[]=
+		{
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"CUP_20Rnd_B_AA12_Buck_00",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ"
+		};
+	};
 };
 class CfgMods
 {
