@@ -542,8 +542,6 @@ class CfgVehicles
 	};
 	class V_LT_L159: I_Plane_Fighter_03_dynamicLoadout_F
 	{
-		scope = 2;
-		scopeCurator = 2;
 		side=0;
 		faction="LT_Group";
 		crew="I_LT_Pilot";
