@@ -2,14 +2,15 @@
 
 class CfgVehicles
 {
-	class I_LT_SpecialForces_Base;
-	class I_LT_SF_Rifleman: I_LT_SpecialForces_Base
+	class LT_SpecialForces_Base;
+	
+	class O_LT_SF_Rifleman: LT_SpecialForces_Base
 	{
 		displayName="Recon Rifleman";
 		scope=2;
 		scopeCurator=2;
 	};
-	class I_LT_SF_Rifleman_GL: I_LT_SpecialForces_Base
+	class O_LT_SF_Rifleman_GL: LT_SpecialForces_Base
 	{
 		displayName="Recon Rifleman (GL)";
 		scope=2;
@@ -75,7 +76,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class I_LT_SF_Scout: I_LT_SpecialForces_Base
+	class O_LT_SF_Scout: LT_SpecialForces_Base
 	{
 		displayName="Recon Scout";
 		scope=2;
@@ -143,7 +144,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_SF_Medic: I_LT_SpecialForces_Base
+	class O_LT_SF_Medic: LT_SpecialForces_Base
 	{
 		displayName="Recon Medic";
 		scope=2;
@@ -258,7 +259,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_SF_Marksman: I_LT_SpecialForces_Base
+	class O_LT_SF_Marksman: LT_SpecialForces_Base
 	{
 		displayName="Recon Marksman";
 		scope=2;
@@ -304,7 +305,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class I_LT_SF_Pathfinder: I_LT_SpecialForces_Base
+	class O_LT_SF_Pathfinder: LT_SpecialForces_Base
 	{
 		displayName="Recon Pathfinder";
 		scope=2;
@@ -350,7 +351,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class I_LT_SF_Demoman: I_LT_SpecialForces_Base
+	class O_LT_SF_Demoman: LT_SpecialForces_Base
 	{
 		displayName="Demolitions Expert";
 		scope=2;
@@ -419,7 +420,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_SF_Autorifleman: I_LT_SpecialForces_Base
+	class O_LT_SF_Autorifleman: LT_SpecialForces_Base
 	{
 		displayName="Recon Autorifleman";
 		scope=2;
@@ -454,7 +455,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class I_LT_SF_GPMG: I_LT_SpecialForces_Base
+	class O_LT_SF_GPMG: LT_SpecialForces_Base
 	{
 		displayName="Recon Machinegunner";
 		scope=2;
@@ -489,7 +490,7 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
 	};
-	class I_LT_SF_AT: I_LT_SpecialForces_Base
+	class O_LT_SF_AT: LT_SpecialForces_Base
 	{
 		displayName="Recon Anti-Tank Specialist";
 		scope=2;
@@ -541,7 +542,7 @@ class CfgVehicles
 			"rhs_rpg7_TBG7V_mag"
 		};
 	};
-	class I_LT_SF_AA: I_LT_SpecialForces_Base
+	class O_LT_SF_AA: LT_SpecialForces_Base
 	{
 		displayName="Recon Anti-Air Specialist";
 		scope=2;
@@ -592,7 +593,7 @@ class CfgVehicles
 			"rhs_fim92_mag"
 		};
 	};
-	class I_LT_SF_Shotgunner: I_LT_SpecialForces_Base {
+	class O_LT_SF_Shotgunner: LT_SpecialForces_Base {
 		displayName = "Recon Shotgunner";
 		scope=2;
 		scopeCurator=2;
@@ -634,6 +635,79 @@ class CfgVehicles
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ"
 		};
+	};
+
+	class I_LT_SF_Rifleman: O_LT_SF_Rifleman
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Rifleman_GL: O_LT_SF_Rifleman_GL
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Scout: O_LT_SF_Scout
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Medic: O_LT_SF_Medic
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Marksman: O_LT_SF_Marksman
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Pathfinder: O_LT_SF_Pathfinder
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Demoman: O_LT_SF_Demoman
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Autorifleman: O_LT_SF_Autorifleman
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_GPMG: O_LT_SF_GPMG
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_AT: O_LT_SF_AT
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_AA: O_LT_SF_AA
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
+	};
+	class I_LT_SF_Shotgunner: O_LT_SF_Shotgunner
+	{
+		side=2;
+		faction="LT_Group_I";
+		uniformClass="U_I_LT_G3";
 	};
 };
 class CfgMods

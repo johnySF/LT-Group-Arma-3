@@ -2,145 +2,17 @@
 
 class CfgVehicles
 {
-	class I_LT_Base;
-	class I_LT_Infantry_Base;
-	class I_LT_Rifleman: I_LT_Infantry_Base
+	class LT_Base;
+	class LT_Infantry_Base;
+	
+	// Regular
+	class O_LT_Rifleman: LT_Infantry_Base
 	{
 		displayName="Rifleman";
 		scope=2;
 		scopeCurator=2;
 	};
-	class I_LT_Officer: I_LT_Infantry_Base
-	{
-		displayName="Officer";
-		scope=2;
-		scopeCurator=2;
-		weapons[] = {
-			"SMG_05_F",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[] = {
-			"SMG_05_F",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		magazines[] = {
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag"
-		};
-		respawnMagazines[] = {
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"30Rnd_9x21_Mag_SMG_02",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_SLA_BeretRed",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_SLA_BeretRed",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-	};
-	class I_LT_Scout: I_LT_Infantry_Base
-	{
-		displayName="Scout";
-		scope=2;
-		scopeCurator=2;
-		weapons[]=
-		{
-			"W_LT_P90_Reflex",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"W_LT_P90_Reflex",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		magazines[]=
-		{
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"ACE_M84",
-			"ACE_M84",
-			"ACE_M84"
-		};
-		respawnMagazines[]=
-		{
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"50Rnd_570x28_SMG_03",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"ACE_M84",
-			"ACE_M84",
-			"ACE_M84"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_Cap_Back_EP_Grey",
-			"G_Shades_Black",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_Cap_Back_EP_Grey",
-			"G_Shades_Black",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-	};
-	class I_LT_Rifleman_GL: I_LT_Infantry_Base
+	class O_LT_Rifleman_GL: LT_Infantry_Base
 	{
 		displayName="Grenadier";
 		scope=2;
@@ -226,7 +98,137 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_Autorifleman: I_LT_Infantry_Base
+	class O_LT_Officer: LT_Infantry_Base
+	{
+		displayName="Officer";
+		scope=2;
+		scopeCurator=2;
+		weapons[] = {
+			"SMG_05_F",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[] = {
+			"SMG_05_F",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		magazines[] = {
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
+		respawnMagazines[] = {
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag"
+		};
+		linkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Black_Patrol",
+			"CUP_H_SLA_BeretRed",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		respawnLinkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Black_Patrol",
+			"CUP_H_SLA_BeretRed",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	class O_LT_Scout: LT_Infantry_Base
+	{
+		displayName="Scout";
+		scope=2;
+		scopeCurator=2;
+		weapons[]=
+		{
+			"W_LT_P90_Reflex",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"W_LT_P90_Reflex",
+			"hgun_ACPC2_F",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"ACE_M84",
+			"ACE_M84",
+			"ACE_M84"
+		};
+		respawnMagazines[]=
+		{
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"50Rnd_570x28_SMG_03",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"9Rnd_45ACP_Mag",
+			"ACE_M84",
+			"ACE_M84",
+			"ACE_M84"
+		};
+		linkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Black_Patrol",
+			"CUP_H_PMC_Cap_Back_EP_Grey",
+			"G_Shades_Black",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		respawnLinkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Black_Patrol",
+			"CUP_H_PMC_Cap_Back_EP_Grey",
+			"G_Shades_Black",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	class O_LT_Autorifleman: LT_Infantry_Base
 	{
 		displayName="Autorifleman";
 		scope=2;
@@ -281,7 +283,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_GPMG: I_LT_Autorifleman
+	class O_LT_GPMG: O_LT_Autorifleman
 	{
 		displayName="Machinegunner";
 		scope=2;
@@ -322,7 +324,7 @@ class CfgVehicles
 			"SmokeShell"
 		};
 	};
-	class I_LT_AT: I_LT_Infantry_Base
+	class O_LT_AT: LT_Infantry_Base
 	{
 		displayName="Anti-Tank Specialist";
 		scope=2;
@@ -374,7 +376,7 @@ class CfgVehicles
 			"rhs_rpg7_TBG7V_mag"
 		};
 	};
-	class I_LT_AA: I_LT_Infantry_Base
+	class O_LT_AA: LT_Infantry_Base
 	{
 		displayName="Anti-Air Specialist";
 		scope=2;
@@ -425,7 +427,7 @@ class CfgVehicles
 			"rhs_fim92_mag"
 		};
 	};
-	class I_LT_Medic: I_LT_Infantry_Base
+	class O_LT_Medic: LT_Infantry_Base
 	{
 		displayName="Medic";
 		scope=2;
@@ -538,7 +540,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_Engineer: I_LT_Infantry_Base
+	class O_LT_Engineer: LT_Infantry_Base
 	{
 		displayName="Engineer";
 		scope=2;
@@ -623,7 +625,7 @@ class CfgVehicles
 			"MineDetector"
 		};
 	};
-	class I_LT_Marksman: I_LT_Infantry_Base
+	class O_LT_Marksman: LT_Infantry_Base
 	{
 		displayName="Marksman";
 		scope=2;
@@ -669,13 +671,13 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag"
 		};
 	};
-	class I_LT_Sniper: I_LT_Base
+	class O_LT_Sniper: LT_Base
 	{
 		displayName="Sniper";
 		scope=2;
 		scopeCurator=2;
 		model="\A3\Characters_F_Mark\INDEP\i_fullghillie_f.p3d";
-		uniformClass="U_LT_Ghillie";
+		uniformClass="U_O_LT_Ghillie";
 		backpack="B_LT_AssaultPack";
 		hiddenSelections[]=
 		{
@@ -750,7 +752,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_Crewman: I_LT_Infantry_Base
+	class O_LT_Crewman: LT_Infantry_Base
 	{
 		displayName="Crewman";
 		scope=2;
@@ -818,13 +820,13 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag"
 		};
 	};
-	class I_LT_Pilot: I_LT_Base
+	class O_LT_Pilot: LT_Base
 	{
 		displayName="Pilot";
 		scope=2;
 		scopeCurator=2;
 		model="\A3\characters_F\Common\pilot_f.p3d";
-		uniformClass="U_LT_Pilot";
+		uniformClass="U_O_LT_PilotCoveralls";
 		hiddenSelectionsTextures[]=
 		{
 			"\A3\Characters_F\Common\Data\pilot_suit_nato_co.paa"
@@ -874,7 +876,7 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_HeliPilot: I_LT_Crewman
+	class O_LT_HeliPilot: O_LT_Crewman
 	{
 		displayName="Helicopter Pilot";
 		scope=2;
@@ -900,331 +902,82 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class I_LT_Hazmat_Base;
-	class I_LT_Rifleman_H: I_LT_Hazmat_Base
-	{
-		displayName="Rifleman (HAZMAT)";
-		scope=2;
-		scopeCurator=2;
+	
+	// Regular (Independent)
+	class I_LT_Rifleman: O_LT_Rifleman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Scout_H: I_LT_Scout
-	{
-		displayName="Scout (HAZMAT)";
-		scope=2;
-		scopeCurator=2;
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_EP_Headset",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_EP_Headset",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Rifleman_GL: O_LT_Rifleman_GL {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Rifleman_GL_H: I_LT_Rifleman_GL
-	{
-		displayName="Grenadier (HAZMAT)";
-		scope=2;
-		scopeCurator=2;
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Officer: O_LT_Officer {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Autorifleman_H: I_LT_Autorifleman
-	{
-		displayName="Autorifleman (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Scout: O_LT_Scout {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_GPMG_H: I_LT_GPMG
-	{
-		displayName="Machinegunner (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Autorifleman: O_LT_Autorifleman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_AT_H: I_LT_Hazmat_Base
-	{
-		displayName="Anti-Tank Specialist (HAZMAT)";
-		scope=2;
-		scopeCurator=2;
-		backpack="B_LT_Carryall_AT";
-		weapons[]=
-		{
-			"W_LT_VHSD2_Holo",
-			"rhs_weap_rpg7",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"W_LT_VHSD2_Holo",
-			"rhs_weap_rpg7",
-			"hgun_ACPC2_F",
-			"Throw",
-			"Put"
-		};
-		magazines[]=
-		{
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"rhs_rpg7_TBG7V_mag"
-		};
-		respawnMagazines[]=
-		{
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"rhsgref_30rnd_556x45_vhs2_t",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"9Rnd_45ACP_Mag",
-			"rhs_rpg7_TBG7V_mag"
-		};
+	class I_LT_GPMG: O_LT_GPMG {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_AA_H: I_LT_Hazmat_Base
-	{
-		displayName="Anti-Air Specialist (HAZMAT)";
-		scope=2;
-		scopeCurator=2;
-		weapons[]=
-		{
-			"W_LT_VHSD2_Holo",
-			"hgun_ACPC2_F",
-			"rhs_weap_fim92",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"W_LT_VHSD2_Holo",
-			"hgun_ACPC2_F",
-			"rhs_weap_fim92",
-			"Throw",
-			"Put"
-		};
+	class I_LT_AT: O_LT_AT {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Medic_H: I_LT_Medic
-	{
-		displayName="Medic (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"V_TacVestIR_blk",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"V_TacVestIR_blk",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_AA: O_LT_AA {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Engineer_H: I_LT_Engineer
-	{
-		displayName="Engineer (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Medic: O_LT_Medic {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Marksman_H: I_LT_Marksman
-	{
-		displayName="Marksman (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		model="\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
-		uniformClass="U_O_R_Gorka_01_black_F";
-		hiddenSelectionsTextures[]=
-		{
-			"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Black_CO.paa"
-		};
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"rhsusf_opscore_bk_pelt",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Engineer: O_LT_Engineer {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
-	class I_LT_Sniper_H: I_LT_Sniper
-	{
-		displayName="Sniper (HAZMAT)";
-		editorSubcategory="LT_E_Chem";
-		linkedItems[]=
-		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
-			"G_AirPurifyingRespirator_01_F",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
+	class I_LT_Marksman: O_LT_Marksman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Sniper: O_LT_Sniper {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_I_FullGhillie_sard";
+	};
+	class I_LT_Crewman: O_LT_Crewman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Pilot: O_LT_Pilot {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_I_LT_PilotCoveralls";
+	};
+	class I_LT_HeliPilot: O_LT_HeliPilot {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
 	};
 };
 class CfgMods

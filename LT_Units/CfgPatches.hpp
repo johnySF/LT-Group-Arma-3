@@ -6,10 +6,25 @@ class CfgPatches{
 			"LiontoothGroup_Base"
 		};
 		units[] = {
+			"O_LT_Rifleman",
+			"O_LT_Rifleman_GL",
+			"O_LT_Officer",
+			"O_LT_Scout",
+			"O_LT_Autorifleman",
+			"O_LT_GPMG",
+			"O_LT_AT",
+			"O_LT_AA",
+			"O_LT_Medic",
+			"O_LT_Engineer",
+			"O_LT_Marksman",
+			"O_LT_Sniper",
+			"O_LT_Crewman",
+			"O_LT_Pilot",
+			"O_LT_HeliPilot",
 			"I_LT_Rifleman",
+			"I_LT_Rifleman_GL",
 			"I_LT_Officer",
 			"I_LT_Scout",
-			"I_LT_Rifleman_GL",
 			"I_LT_Autorifleman",
 			"I_LT_GPMG",
 			"I_LT_AT",
@@ -20,18 +35,7 @@ class CfgPatches{
 			"I_LT_Sniper",
 			"I_LT_Crewman",
 			"I_LT_Pilot",
-			"I_LT_HeliPilot",
-			"I_LT_Rifleman_H",
-			"I_LT_Scout_H",
-			"I_LT_Rifleman_GL_H",
-			"I_LT_Autorifleman_H",
-			"I_LT_GPMG_H",
-			"I_LT_AT_H",
-			"I_LT_AA_H",
-			"I_LT_Medic_H",
-			"I_LT_Engineer_H",
-			"I_LT_Marksman_H",
-			"I_LT_Sniper_H"
+			"I_LT_HeliPilot"
 		};
 	};
 };

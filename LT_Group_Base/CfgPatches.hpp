@@ -32,8 +32,6 @@ class CfgPatches
 			"rhsgref_c_air",
 			"rhsusf_c_ch53",
 			"rhsgref_c_tohport_air",
-			"CUP_Weapons_AA12",
-			"CUP_Weapons_Ammunition",
 			"CUP_Weapons_NVG",
 			"CUP_Creatures_Military_PMC",
 			"CUP_Creatures_Military_Russia",

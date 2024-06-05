@@ -6,10 +6,24 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"LiontoothGroup_Base"
+			"LiontoothGroup_Base",
+			"CUP_Weapons_AA12",
+			"CUP_Weapons_Ammunition"
 		};
 		units[]=
 		{
+			"O_LT_SF_Rifleman",
+			"O_LT_SF_Rifleman_GL",
+			"O_LT_SF_Scout",
+			"O_LT_SF_Medic",
+			"O_LT_SF_Marksman",
+			"O_LT_SF_Pathfinder",
+			"O_LT_SF_Demoman",
+			"O_LT_SF_Autorifleman",
+			"O_LT_SF_GPMG",
+			"O_LT_SF_AT",
+			"O_LT_SF_AA",
+			"O_LT_SF_Shotgunner",
 			"I_LT_SF_Rifleman",
 			"I_LT_SF_Rifleman_GL",
 			"I_LT_SF_Scout",
