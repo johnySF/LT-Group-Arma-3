@@ -5,4 +5,5 @@ I'm fine with anyone using my cursed addon, as long as it stays open for others 
 <h3>TODO</h3>
 • Fix T-72 crew including a soviet soldier;<br/>
 • Fix L-159 not showing up on Zeus Interface;<br/>
+• Add a Independent version<br/>
 • Custom uniforms... Maybe?
