@@ -343,61 +343,61 @@ class CfgVehicles
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Rifleman_GL_H: O_LT_Rifleman_GL_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Scout_H: O_LT_Scout_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Autorifleman_H: O_LT_Autorifleman_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_GPMG_H: O_LT_GPMG_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_AT_H: O_LT_AT_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_AA_H: O_LT_AA_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Medic_H: O_LT_Medic_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Engineer_H: O_LT_Engineer_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Marksman_H: O_LT_Marksman_H
 	{
 		side=2;
 		faction="LT_Group_I";
-		uniformClass="U_I_LT_Tracksuit";
+		uniformClass="U_O_R_Gorka_01_black_F";
 	};
 	class I_LT_Sniper_H: O_LT_Sniper_H
 	{

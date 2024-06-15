@@ -9,6 +9,7 @@ class CfgVehicles
 	class rhsgref_hidf_m1025_m2;
 	class C_Van_02_transport_F;
 	class C_Van_02_vehicle_F;
+	class rhsusf_m113d_usarmy;
 	class rhsgref_cdf_b_btr80;
 	class rhs_t72bc_tv;
 	class MBT_02_railgun_base_F;
@@ -229,6 +230,9 @@ class CfgVehicles
 			"O_LT_Rifleman_GL",
 			"O_LT_Autorifleman"
 		};
+		textureList[] = {
+			"Black",1
+		};
 		class TransportBackpacks
 		{
 		};
@@ -279,6 +283,9 @@ class CfgVehicles
 			"O_LT_Rifleman_GL",
 			"O_LT_Autorifleman"
 		};
+		textureList[] = {
+			"Black",1
+		};
 		class TransportBackpacks
 		{
 		};
@@ -317,10 +324,63 @@ class CfgVehicles
 			};
 		};
 	};
+	class V_O_LT_M113: rhsusf_m113d_usarmy
+	{
+		side=0;
+		faction="LT_Group_O";
+		editorSubcategory = "EdSubcat_APCs";
+		crew="O_LT_Crewman";
+		typicalCargo[]=
+		{
+			"O_LT_Crewman",
+			"O_LT_Rifleman",
+			"O_LT_Scout",
+			"O_LT_Rifleman_GL",
+			"O_LT_Autorifleman"
+		};
+		class TransportBackpacks
+		{
+		};
+		class TransportMagazines
+		{
+			class _xx_rhsgref_30rnd_556x45_vhs2_t
+			{
+				magazine="rhsgref_30rnd_556x45_vhs2_t";
+				count=10;
+			};
+			class _xx_9Rnd_45ACP_Mag
+			{
+				magazine="9Rnd_45ACP_Mag";
+				count=5;
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_rhs_weap_vhsd2
+			{
+				weapon="rhs_weap_vhsd2";
+				count=3;
+			};
+			class _xx_hgun_ACPC2_F
+			{
+				weapon="hgun_ACPC2_F";
+				count=3;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=10;
+			};
+		};
+	};
 	class V_O_LT_BTR80: rhsgref_cdf_b_btr80
 	{
 		side=0;
 		faction="LT_Group_O";
+		editorSubcategory = "EdSubcat_APCs";
 		crew="O_LT_Crewman";
 		typicalCargo[]=
 		{
@@ -407,7 +467,6 @@ class CfgVehicles
 			"A3\Armor_F\Data\camonet_CSAT_HEX_Green_CO.paa"
 		};
 	};
-	
 	class V_I_LT_UAZ: V_O_LT_UAZ
 	{
 		side=2;
@@ -472,6 +531,9 @@ class CfgVehicles
 			"I_LT_Rifleman_GL",
 			"I_LT_Autorifleman"
 		};
+		textureList[] = {
+			"Black",1
+		};
 	};
 	class V_I_LT_Van_Cargo : V_O_LT_Van_Cargo
 	{
@@ -480,6 +542,20 @@ class CfgVehicles
 		crew="I_LT_Rifleman";
 		typicalCargo[]=
 		{
+			"I_LT_Rifleman",
+			"I_LT_Scout",
+			"I_LT_Rifleman_GL",
+			"I_LT_Autorifleman"
+		};
+	};
+	class V_I_LT_M113: V_O_LT_M113
+	{
+		side=2;
+		faction="LT_Group_I";
+		crew="I_LT_Crewman";
+		typicalCargo[]=
+		{
+			"I_LT_Crewman",
 			"I_LT_Rifleman",
 			"I_LT_Scout",
 			"I_LT_Rifleman_GL",
@@ -499,7 +575,6 @@ class CfgVehicles
 			"I_LT_Rifleman_GL",
 			"I_LT_Autorifleman"
 		};
-
 	};
 	class V_I_LT_T72: V_O_LT_T72
 	{
@@ -533,7 +608,7 @@ class CfgVehicles
 	class rhsgref_b_mi24g_CAS;
 	class I_Plane_Fighter_04_F;
 	class I_Plane_Fighter_03_dynamicLoadout_F;
-	class RHS_C130J_Base;
+	class RHS_C130J;
 	class B_T_VTOL_01_infantry_F;
 
 	class V_O_LT_MH6: B_Heli_Light_01_F
@@ -724,7 +799,7 @@ class CfgVehicles
 			"O_LT_SF_Rifleman"
 		};
 	};
-	class V_O_LT_C130J: RHS_C130J_Base
+	class V_O_LT_C130J: RHS_C130J
 	{
 		scope=2;
 		scopeCurator=2;
@@ -768,17 +843,6 @@ class CfgVehicles
 		textureList[]=
 		{
 			"LT_Livery", 1
-		};
-	};
-	class V_I_LT_C130J: V_O_LT_C130J
-	{
-		side=2;
-		faction="LT_Group_I";
-		crew="I_LT_Pilot";
-		typicalCargo[]=
-		{
-			"I_LT_Pilot",
-			"I_LT_Pilot"
 		};
 	};
 	class V_I_LT_MH6: V_O_LT_MH6
@@ -869,14 +933,24 @@ class CfgVehicles
 			"I_LT_SF_Rifleman"
 		};
 	};
-	
+	class V_I_LT_C130J: V_O_LT_C130J
+	{
+		side=2;
+		faction="LT_Group_I";
+		crew="I_LT_Pilot";
+		typicalCargo[]=
+		{
+			"I_LT_Pilot",
+			"I_LT_Pilot"
+		};
+	};
+
 	// Turrets
 	class B_G_HMG_02_F;
 	class B_G_HMG_02_high_F;
 	class RHS_AGS30_TriPod_base;
 	class RHS_ZU23_base;
 	class B_Mortar_01_F;
-	// Opfor
 	class T_O_LT_M2: B_G_HMG_02_F
 	{
 		side=0;
@@ -921,7 +995,6 @@ class CfgVehicles
 		faction="LT_Group_O";
 		crew="O_LT_Rifleman";
 	};
-	// Independent
 	class T_I_LT_M2: B_G_HMG_02_F
 	{
 		side=2;
@@ -967,7 +1040,7 @@ class CfgVehicles
 		crew="I_LT_Rifleman";
 	};
 };
-class cfgMods
+class CfgMods
 {
 	author="johnyF";
 };

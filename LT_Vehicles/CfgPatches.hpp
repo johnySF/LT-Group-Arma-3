@@ -6,7 +6,10 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"LiontoothGroup_Base"
+			"LiontoothGroup_Base",
+			"A3_Soft_F_Orange",
+			"rhs_c_t72",
+			"rhsusf_c_ch53"
 		};
 		units[]=
 		{
@@ -16,6 +19,7 @@ class CfgPatches
 			"V_O_LT_M1025_M2",
 			"V_O_LT_Van",
 			"V_O_LT_Van_Cargo",
+			"V_O_LT_M113",
 			"V_O_LT_BTR80",
 			"V_O_LT_T72",
 			"V_O_LT_Railgun_Tank",
@@ -25,6 +29,7 @@ class CfgPatches
 			"V_I_LT_M1025_M2",
 			"V_I_LT_Van",
 			"V_I_LT_Van_Cargo",
+			"V_I_LT_M113",
 			"V_I_LT_BTR80",
 			"V_I_LT_T72",
 			"V_I_LT_Railgun_Tank",

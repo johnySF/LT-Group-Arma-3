@@ -15,21 +15,58 @@ class CfgFactionClasses
 };
 class CfgEditorSubcategories
 {
+	class LT_E_Desert
+	{
+		displayName="Men (Desert)";
+	};
 	class LT_E_Chem
 	{
 		displayName="Men (HAZMAT)";
-	};
-	class EdSubCat_LT_Infantry
-	{
-		displayName="Infantry";
 	};
 };
 class CfgVehicles
 {
 	class B_AssaultPack_blk;
+	class B_AssaultPack_cbr;
 	class B_Carryall_blk;
+	class B_Carryall_cbr;
 	class B_LegStrapBag_black_F;
 	class B_LT_AssaultPack: B_AssaultPack_blk
+	{
+		scope=1;
+		class TransportMagazines
+		{
+			class _xx_HandGrenade
+			{
+				magazine="HandGrenade";
+				count=2;
+			};
+			class _xx_SmokeShell
+			{
+				magazine="SmokeShell";
+				count=3;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_ACE_Flashlight_XL50
+			{
+				name="ACE_Flashlight_XL50";
+				count=1;
+			};
+			class _xx_ACE_wirecutter
+			{
+				name="ACE_wirecutter";
+				count=1;
+			};
+			class _xx_CUP_NVG_PVS7
+			{
+				name="CUP_NVG_PVS7";
+				count=1;
+			};
+		};
+	};
+	class B_LT_AssaultPack_Desert: B_AssaultPack_cbr
 	{
 		scope=1;
 		class TransportMagazines
@@ -141,7 +178,61 @@ class CfgVehicles
 			};
 		};
 	};
+	class B_LT_MedicalPack_D: B_Carryall_cbr
+	{
+		scope=1;
+		class TransportItems
+		{
+			class _xx_ACE_elasticBandage
+			{
+				name="ACE_elasticBandage";
+				count=10;
+			};
+			class _xx_ACE_packingBandage
+			{
+				name="ACE_packingBandage";
+				count=10;
+			};
+			class _xx_ACE_quikclot
+			{
+				name="ACE_quikclot";
+				count=10;
+			};
+			class _xx_ACE_salineIV_500
+			{
+				name="ACE_salineIV_500";
+				count=3;
+			};
+			class _xx_ACE_splint
+			{
+				name="ACE_splint";
+				count=4;
+			};
+			class _xx_CUP_NVG_PVS7
+			{
+				name="CUP_NVG_PVS7";
+				count=1;
+			};
+		};
+	};
 	class B_LT_Carryall: B_Carryall_blk
+	{
+		scope=1;
+		class TransportItems
+		{
+			class _xx_ACE_wirecutter
+			{
+				name="ACE_wirecutter";
+				count=1;
+			};
+			class _xx_CUP_NVG_PVS7
+			{
+				name="CUP_NVG_PVS7";
+				count=1;
+			};
+		};
+	};
+	class B_LT_Carryall_D: B_Carryall_cbr
 	{
 		scope=1;
 		class TransportItems
@@ -162,9 +253,25 @@ class CfgVehicles
 	{
 		class TransportMagazines
 		{
-			class _xx_rhs_45Rnd_545X39_7N22_AK
+			class _xx_rhs_60Rnd_545X39_AK_Green
 			{
-				magazine="rhs_45Rnd_545X39_7N22_AK";
+				magazine="rhs_60Rnd_545X39_AK_Green";
+				count=7;
+			};
+			class _xx_SmokeShell
+			{
+				magazine="SmokeShell";
+				count=3;
+			};
+		};
+	};
+	class B_LT_Carryall_Auto_D: B_LT_Carryall_D
+	{
+		class TransportMagazines
+		{
+			class _xx_rhs_60Rnd_545X39_AK_Green
+			{
+				magazine="rhs_60Rnd_545X39_AK_Green";
 				count=7;
 			};
 			class _xx_SmokeShell
@@ -201,6 +308,18 @@ class CfgVehicles
 			};
 		};
 	};
+	class B_LT_Carryall_GPMG_D: B_LT_Carryall_D
+	{
+		class TransportMagazines
+		{
+			class _xx_rhs_100Rnd_762x54mmR_green
+			{
+				magazine="rhs_100Rnd_762x54mmR_green";
+				count=5;
+			};
+		};
+
+	};
 	class B_LT_Carryall_GPMG_SF: B_LT_Carryall
 	{
 		class TransportMagazines
@@ -228,6 +347,23 @@ class CfgVehicles
 			};
 		};
 	};
+	class B_LT_Carryall_AT_D: B_LT_Carryall_D
+	{
+		class TransportMagazines
+		{
+			class _xx_rhs_rpg7_TBG7V_mag
+			{
+				magazine="rhs_rpg7_TBG7V_mag";
+				count=1;
+			};
+			class _xx_SmokeShell
+			{
+				magazine="SmokeShell";
+				count=3;
+			};
+		};
+
+	};
 	class B_LT_Legstrap: B_LegStrapBag_black_F
 	{
 		scope=1;
@@ -240,6 +376,7 @@ class CfgVehicles
 			};
 		};
 	};
+	
 	class O_Soldier_base_F;
 	class LT_Base: O_Soldier_base_F
 	{
@@ -360,6 +497,80 @@ class CfgVehicles
 			"9Rnd_45ACP_Mag"
 		};
 	};
+	class LT_Desert_Base: LT_Infantry_Base
+	{
+		editorSubcategory="LT_E_Desert";
+		uniformClass="U_O_LT_Uniform_Desert";
+		backpack="B_LT_AssaultPack_Desert";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"LT_Group_Base\Data\uniformDesert.paa"
+		};
+		linkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Coyote_Patrol",
+			"rhsusf_opscore_coy_cover_pelt",
+			"rhsusf_shemagh2_gogg_tan",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		respawnLinkedItems[]=
+		{
+			"CUP_V_PMC_CIRAS_Coyote_Patrol",
+			"rhsusf_opscore_coy_cover_pelt",
+			"rhsusf_shemagh2_gogg_tan",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		weapons[]=
+		{
+			"W_LT_AK74M",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"W_LT_AK74M",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"
+		};
+		respawnMagazines[]=
+		{
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"rhs_30Rnd_545x39_7N22_desert_AK",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"
+		};
+	};
 	class LT_Hazmat_Base: LT_Infantry_Base
 	{
 		editorSubcategory="LT_E_Chem";
@@ -478,11 +689,30 @@ class CfgWeapons
 {
 	// Uniforms
 	class UniformItem;
+	class U_OG_Guerilla2_3;
 	class U_B_PilotCoveralls;
 	class U_I_FullGhillie_sard;
 	class rhs_uniform_g3_blk;
 	class U_O_R_Gorka_01_black_F;
 
+	class U_O_LT_Uniform_Desert: U_OG_Guerilla2_3 {
+		displayName="Liontooth Uniform (Desert)";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"LT_Group_Base\Data\uniformDesert.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "O_LT_Rifleman_D";
+			containerClass="Supply30";
+			mass=30;
+		};
+	};
 	class U_O_LT_PilotCoveralls: U_B_PilotCoveralls
 	{
 		scope=1;
@@ -534,17 +764,6 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="I_LT_SF_Rifleman";
-			containerClass="Supply40";
-			mass=40;
-		};
-	};
-	class U_I_LT_Tracksuit: U_O_R_Gorka_01_black_F
-	{
-		scope=1;
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="I_LT_Rifleman_H";
 			containerClass="Supply40";
 			mass=40;
 		};
@@ -624,6 +843,61 @@ class CfgWeapons
 		};
 	};
 	
+	class rhs_weap_ak74m_desert_npz;
+	class rhs_weap_ak74m_gp25_npz;
+	class rhsusf_weap_MP7A2_desert;
+	class rhs_weap_sr25_d;
+	class W_LT_AK74M: rhs_weap_ak74m_desert_npz
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="rhsusf_acc_eotech_xps3";
+			};
+		};
+	};
+	class W_LT_AK74M_GL: rhs_weap_ak74m_gp25_npz
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="rhsusf_acc_eotech_xps3";
+			};
+		};
+	};
+	class W_LT_MP7: rhsusf_weap_MP7A2_desert
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="rhsusf_acc_RM05";
+			};
+			class LinkedItemsUnder
+			{
+				slot="UnderBarrelSlot";
+				item="rhsusf_acc_tdstubby_tan";
+			};
+		};
+	};
+	class W_LT_SR25: rhs_weap_sr25_d
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="optic_SOS";
+			};
+		};
+
+	};
+
 	// Weapons (Special Forces)
 	class rhs_weap_hk416d145;
 	class rhs_weap_hk416d145_m320;
@@ -3838,7 +4112,7 @@ class CfgGroups
 		};
 	};
 };
-class cfgMods
+class CfgMods
 {
 	author="johnyF";
 };
