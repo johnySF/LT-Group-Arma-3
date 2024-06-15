@@ -903,6 +903,82 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
+	// Regular (Independent)
+	class I_LT_Rifleman: O_LT_Rifleman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Rifleman_GL: O_LT_Rifleman_GL {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Officer: O_LT_Officer {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Scout: O_LT_Scout {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Autorifleman: O_LT_Autorifleman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_GPMG: O_LT_GPMG {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_AT: O_LT_AT {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_AA: O_LT_AA {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Medic: O_LT_Medic {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Engineer: O_LT_Engineer {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Marksman: O_LT_Marksman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Sniper: O_LT_Sniper {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_I_FullGhillie_sard";
+	};
+	class I_LT_Crewman: O_LT_Crewman {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
+	class I_LT_Pilot: O_LT_Pilot {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_I_LT_PilotCoveralls";
+	};
+	class I_LT_HeliPilot: O_LT_HeliPilot {
+		side = 2;
+		faction = "LT_Group_I";
+		uniformClass="U_IG_Guerilla2_3";
+	};
 	
 	// Desert
 	class O_LT_Rifleman_D: LT_Desert_Base
@@ -1573,82 +1649,61 @@ class CfgVehicles
 			"11Rnd_45ACP_Mag"
 		};
 	};
-
-	// Regular (Independent)
-	class I_LT_Rifleman: O_LT_Rifleman {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	// Desert (Independent)
+	class I_LT_Rifleman_D: O_LT_Rifleman_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Rifleman_GL: O_LT_Rifleman_GL {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Rifleman_GL_D: O_LT_Rifleman_GL_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Officer: O_LT_Officer {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Officer_D: O_LT_Officer_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Scout: O_LT_Scout {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Scout_D: O_LT_Scout_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Autorifleman: O_LT_Autorifleman {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Autorifleman_D: O_LT_Autorifleman_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_GPMG: O_LT_GPMG {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_GPMG_D: O_LT_GPMG_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_AT: O_LT_AT {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_AT_D: O_LT_AT_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_AA: O_LT_AA {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_AA_D: O_LT_AA_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Medic: O_LT_Medic {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Medic_D: O_LT_Medic_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Engineer: O_LT_Engineer {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Engineer_D: O_LT_Engineer_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
-	class I_LT_Marksman: O_LT_Marksman {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
-	};
-	class I_LT_Sniper: O_LT_Sniper {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_I_FullGhillie_sard";
-	};
-	class I_LT_Crewman: O_LT_Crewman {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
-	};
-	class I_LT_Pilot: O_LT_Pilot {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_I_LT_PilotCoveralls";
-	};
-	class I_LT_HeliPilot: O_LT_HeliPilot {
-		side = 2;
-		faction = "LT_Group_I";
-		uniformClass="U_IG_Guerilla2_3";
+	class I_LT_Marksman_D: O_LT_Marksman_D
+	{
+		side=2;
+		faction="LT_Group_I";
 	};
 };
 class CfgMods

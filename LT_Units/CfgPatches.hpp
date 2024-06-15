@@ -35,7 +35,29 @@ class CfgPatches{
 			"I_LT_Sniper",
 			"I_LT_Crewman",
 			"I_LT_Pilot",
-			"I_LT_HeliPilot"
+			"I_LT_HeliPilot",
+			"O_LT_Rifleman_D",
+			"O_LT_Rifleman_GL_D",
+			"O_LT_Officer_D",
+			"O_LT_Scout_D",
+			"O_LT_Autorifleman_D",
+			"O_LT_GPMG_D",
+			"O_LT_AT_D",
+			"O_LT_AA_D",
+			"O_LT_Medic_D",
+			"O_LT_Engineer_D",
+			"O_LT_Marksman_D",
+			"I_LT_Rifleman_D",
+			"I_LT_Rifleman_GL_D",
+			"I_LT_Officer_D",
+			"I_LT_Scout_D",
+			"I_LT_Autorifleman_D",
+			"I_LT_GPMG_D",
+			"I_LT_AT_D",
+			"I_LT_AA_D",
+			"I_LT_Medic_D",
+			"I_LT_Engineer_D",
+			"I_LT_Marksman_D"
 		};
 	};
 };
