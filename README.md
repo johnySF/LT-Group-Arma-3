@@ -5,6 +5,5 @@ I'm fine with anyone using my cursed addon, as long as it stays open for others 
 <br/>
 <h3>Known Issues</h3>
 • C-130J's custom skin won't apply automatically;<br/>
-• Independent HAZMAT units are using the wrong texture;<br/>
 • AA units have no ammo;<br/>
 • CH-53E's rotor is missing.
