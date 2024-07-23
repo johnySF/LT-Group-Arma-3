@@ -4,6 +4,4 @@ Files are mostly config based, meaning it inherits from it's dependencies.<br/>
 I'm fine with anyone using my cursed addon, as long as it stays open for others if public, and there is no fishy shenanigans with it.
 <br/>
 <h3>Known Issues</h3>
-• C-130J's custom skin won't apply automatically;<br/>
-• AA units have no ammo;<br/>
-• CH-53E's rotor is missing.
+• C-130J's custom skin won't apply automatically.
