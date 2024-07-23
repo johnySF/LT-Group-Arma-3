@@ -720,11 +720,17 @@ class CfgVehicles
 		crew="O_LT_HeliPilot";
 		hiddenSelections[]=
 		{
-			"camo"
+			"camo",
+			"camo1",
+			"n1",
+			"n2"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"LT_Vehicles\Data\ch53_LT_co.paa"
+			"LT_Vehicles\Data\ch53_LT_co.paa",
+			"rhsusf\addons\rhsusf_ch53\data\ch53_acc_co.paa",
+			"rhsusf\addons\rhsusf_decals\Data\Numbers\USMCBlackShadow\5_ca.paa",
+			"rhsusf\addons\rhsusf_decals\Data\Numbers\USMCBlackShadow\5_ca.paa"
 		};
 		typicalCargo[]=
 		{
