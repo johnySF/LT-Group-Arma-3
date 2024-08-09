@@ -80,9 +80,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
 			"rhsusf_opscore_bk_pelt",
 			"rhsusf_oakley_goggles_clr",
+			"V_CarrierRigKBT_01_heavy_Olive_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -90,9 +90,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
 			"rhsusf_opscore_bk_pelt",
 			"rhsusf_oakley_goggles_clr",
+			"V_CarrierRigKBT_01_heavy_Olive_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -140,8 +140,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_SLA_BeretRed",
+			"H_WirelessEarpiece_F",
+			"G_Aviator",
+			"V_TacVest_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -149,8 +150,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_SLA_BeretRed",
+			"H_WirelessEarpiece_F",
+			"G_Aviator",
+			"V_TacVest_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -210,9 +212,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_Cap_Back_EP_Grey",
+			"H_Cap_headphones",
 			"G_Shades_Black",
+			"V_BandollierB_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -220,9 +222,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_Cap_Back_EP_Grey",
+			"H_Cap_headphones",
 			"G_Shades_Black",
+			"V_BandollierB_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -265,9 +267,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"rhsusf_oakley_goggles_clr",
+			"V_CarrierRigKBT_01_Olive_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -275,9 +277,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"rhsusf_oakley_goggles_clr",
+			"V_CarrierRigKBT_01_Olive_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -734,9 +736,8 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
 			"G_Balaclava_Flecktarn",
+			"V_Chestrig_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -744,9 +745,8 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
 			"G_Balaclava_Flecktarn",
+			"V_Chestrig_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -762,9 +762,9 @@ class CfgVehicles
 		engineer=1;
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Veh",
 			"rhsusf_cvc_green_helmet",
 			"rhsusf_oakley_goggles_clr",
+			"V_SmershVest_01_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -772,9 +772,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Veh",
 			"rhsusf_cvc_green_helmet",
 			"rhsusf_oakley_goggles_clr",
+			"V_SmershVest_01_F",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -884,8 +884,8 @@ class CfgVehicles
 		scopeCurator=2;
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Veh",
 			"H_PilotHelmetHeli_B",
+			"V_SmershVest_01_F",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
@@ -894,8 +894,8 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Veh",
 			"H_PilotHelmetHeli_B",
+			"V_SmershVest_01_F",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
@@ -992,26 +992,6 @@ class CfgVehicles
 		displayName="Grenadier";
 		scope=2;
 		scopeCurator=2;
-		linkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Coyote_Grenadier",
-			"rhsusf_opscore_coy_cover_pelt",
-			"rhsusf_shemagh2_gogg_tan",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
-		respawnLinkedItems[]=
-		{
-			"CUP_V_PMC_CIRAS_Coyote_Grenadier",
-			"rhsusf_opscore_coy_cover_pelt",
-			"rhsusf_shemagh2_gogg_tan",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
-		};
 		weapons[]=
 		{
 			"W_LT_AK74M_GL",
@@ -1115,8 +1095,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Coyote_Patrol",
-			"CUP_H_SLA_BeretRed",
+			"H_WirelessEarpiece_F",
+			"G_Aviator",
+			"V_TacVest_brn",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -1124,8 +1105,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Coyote_Patrol",
-			"CUP_H_SLA_BeretRed",
+			"H_WirelessEarpiece_F",
+			"G_Aviator",
+			"V_TacVest_brn",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -1185,9 +1167,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Coyote_Patrol",
 			"H_Booniehat_khk_hs",
 			"rhsusf_shemagh2_gogg_tan",
+			"V_BandollierB_cbr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -1195,9 +1177,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Coyote_Patrol",
 			"H_Booniehat_khk_hs",
 			"rhsusf_shemagh2_gogg_tan",
+			"V_BandollierB_cbr",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -1238,11 +1220,11 @@ class CfgVehicles
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag"
 		};
-		linkedItems[]=
+		/*linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Coyote_Empty",
 			"rhsusf_opscore_coy_cover_pelt",
 			"rhsusf_shemagh2_gogg_tan",
+			"CUP_V_PMC_CIRAS_Coyote_Empty",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -1257,7 +1239,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio"
-		};
+		};*/
 	};
 	class O_LT_GPMG_D: O_LT_Autorifleman_D
 	{

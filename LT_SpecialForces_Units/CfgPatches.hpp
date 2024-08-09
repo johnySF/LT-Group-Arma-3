@@ -6,9 +6,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"LiontoothGroup_Base",
-			"CUP_Weapons_AA12",
-			"CUP_Weapons_Ammunition"
+			"Liontooth_Base"
 		};
 		units[]=
 		{
@@ -23,7 +21,6 @@ class CfgPatches
 			"O_LT_SF_GPMG",
 			"O_LT_SF_AT",
 			"O_LT_SF_AA",
-			"O_LT_SF_Shotgunner",
 			"I_LT_SF_Rifleman",
 			"I_LT_SF_Rifleman_GL",
 			"I_LT_SF_Scout",
@@ -34,8 +31,7 @@ class CfgPatches
 			"I_LT_SF_Autorifleman",
 			"I_LT_SF_GPMG",
 			"I_LT_SF_AT",
-			"I_LT_SF_AA",
-			"I_LT_SF_Shotgunner"
+			"I_LT_SF_AA"
 		};
 	};
 };

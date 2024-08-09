@@ -3,7 +3,7 @@ class CfgPatches{
 		weapons[] = {};
 		requiredVersion=0.1;
 		requiredAddons[] = {
-			"LiontoothGroup_Base"
+			"Liontooth_Base"
 		};
 		units[] = {
 			"O_LT_Rifleman",

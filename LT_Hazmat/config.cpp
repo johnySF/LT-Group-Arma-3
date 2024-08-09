@@ -33,9 +33,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -43,9 +43,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Grenadier",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -66,9 +66,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_EP_Headset",
+			"H_EarProtectors_black_F",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -76,9 +76,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
-			"CUP_H_PMC_EP_Headset",
+			"H_EarProtectors_black_F",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -97,9 +97,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -107,9 +107,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -128,9 +128,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -138,9 +138,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Empty",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -232,9 +232,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"V_TacVestIR_blk",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_TacVestIR_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -242,9 +242,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"V_TacVestIR_blk",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_TacVestIR_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -263,9 +263,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -273,9 +273,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -294,9 +294,9 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -304,9 +304,9 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"CUP_V_PMC_CIRAS_Black_Patrol",
 			"rhsusf_opscore_bk_pelt",
 			"G_AirPurifyingRespirator_01_F",
+			"V_PlateCarrier1_blk",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -319,9 +319,8 @@ class CfgVehicles
 		editorSubcategory="LT_E_Chem";
 		linkedItems[]=
 		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
 			"G_AirPurifyingRespirator_01_F",
+			"V_Chestrig_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -329,9 +328,8 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"V_Chestrig_oli",
-			"CUP_H_PMC_EP_Headset",
 			"G_AirPurifyingRespirator_01_F",
+			"V_Chestrig_oli",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",

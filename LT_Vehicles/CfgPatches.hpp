@@ -6,8 +6,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"LiontoothGroup_Base",
-			"A3_Soft_F_Orange",
+			"Liontooth_Base",
 			"rhs_c_t72",
 			"rhsusf_c_ch53"
 		};
