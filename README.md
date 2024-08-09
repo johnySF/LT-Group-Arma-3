@@ -3,5 +3,7 @@ Source code for the Arma 3 addon found <a href="https://steamcommunity.com/share
 Files are mostly config based, meaning it inherits from it's dependencies.<br/>
 I'm fine with anyone using my cursed addon, as long as it stays open for others if public, and there is no fishy shenanigans with it.
 <br/>
-<h3>Known Issues</h3>
-• C-130J's custom skin won't apply automatically.
+<h3>TODO</h3>
+• Fix C-130J's custom skin;
+• Finish compositions;
+• Clean code to make it more readable.
