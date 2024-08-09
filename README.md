@@ -4,6 +4,6 @@ Files are mostly config based, meaning it inherits from it's dependencies.<br/>
 I'm fine with anyone using my cursed addon, as long as it stays open for others if public, and there is no fishy shenanigans with it.
 <br/>
 <h3>TODO</h3>
-• Fix C-130J's custom skin;
-• Finish compositions;
+• Fix C-130J's custom skin;<br/>
+• Finish compositions;<br/>
 • Clean code to make it more readable.
