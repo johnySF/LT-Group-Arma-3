@@ -1,5 +1,6 @@
 class CfgVehicles
 {
+	// Backpacks
 	class B_AssaultPack_blk;
 	class B_AssaultPack_cbr;
 	class B_Carryall_blk;
@@ -315,7 +316,8 @@ class CfgVehicles
 			};
 		};
 	};
-	
+
+	// Units (Inheritance only)
 	class O_Soldier_base_F;
 	class LT_Base: O_Soldier_base_F
 	{
